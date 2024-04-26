@@ -9,6 +9,7 @@ const session = require('cookie-session');
 
 // This is the root file of the routing structure
 const indexRouter = require('./routes/index');
+const setupPassport = require('./lib/passport');
 
 // This is a simple helper that avoids 404 errors when
 // the browser tried to look for a favicon file
@@ -21,6 +22,7 @@ function ignoreFavicon(req, res, next) {
 
 module.exports = (config) => {
   const app = express();
+  const passport = setupPassport(config);
   // Just in case we need to log something later
   // const { logger } = config;
 
@@ -62,9 +64,18 @@ module.exports = (config) => {
   app.use(express.urlencoded({ extended: false }));
   app.use(cookieParser());
 
+  app.use(passport.initialize());
+  app.use(passport.session());
+
   /**
    * @todo: Implement a middleware that restores the user from the database if `userId` is present on the session
    */
+  app.use(async (req, res, next) => {
+    req.sessionOptions.maxAge =
+      req.session.rememberme || req.sessionOptions.maxAge;
+    res.locals.user = req.user;
+    return next();
+  });
 
   // This sets up 'flash messaging'
   // With that, we can store messages to the user in the session
