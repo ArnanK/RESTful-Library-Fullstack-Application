@@ -10,7 +10,7 @@ module.exports = () => {
    * GET route to display the login form
    */
   router.get('/login', (req, res) => {
-    res.render('auth/login', { page: 'login', title: 'login', stylesheet: 'main.css' });
+    res.render('auth/login', { page: 'login-pages', title: 'login', stylesheet: 'login.css', });
   });
 
   /**

@@ -15,7 +15,7 @@ module.exports = () => {
     res.render('auth/registration', {
       page: 'registration',
       title: 'registration',
-      stylesheet: 'main.css',
+      stylesheet: 'login.css',
     });
   });
 

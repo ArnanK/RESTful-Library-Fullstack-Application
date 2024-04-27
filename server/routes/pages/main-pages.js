@@ -8,6 +8,7 @@ module.exports = () => {
       page: 'main-pages',
       stylesheet: 'home.css',
       title: 'Recipes-Home',
+      auth: false,
     });
   });
 

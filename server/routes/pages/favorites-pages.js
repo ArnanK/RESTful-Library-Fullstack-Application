@@ -8,6 +8,7 @@ module.exports = () => {
       page: 'favorites-pages',
       stylesheet: 'favorites.css',
       title: 'Recipes-Favorites',
+      auth: false,
     });
   });
 

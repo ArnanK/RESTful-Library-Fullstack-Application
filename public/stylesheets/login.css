@@ -1,5 +1,5 @@
 
-.contact-container {
+.login-container {
     max-width: 1100px;
     max-height: 750px;
     margin: 40px auto;
@@ -9,39 +9,39 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.contact-container{
+.login-container{
     height: 95vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-.contact-left{
+.login-left{
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 17px;
     justify-items: center;
 }
-.contact-left-title h2{
+.login-left-title h2{
     font-weight: 600;
     color: #000000;
     font-size: 40px;
     margin-bottom: 5px;
     margin-top: -10px;
 }
-.contact-left-title hr{
+.login-left-title hr{
     background-color: #000000;
     width: 150px;
     margin-top: 8px;
     margin-left: 0px;
 }
 
-#contactForm label {
+#loginForm label {
     display: block;
     color: #2d2d2d;
 }
 
-.contact-inputs{
+.login-inputs{
     width: 430px;
     height: 50px;
     border: none;
@@ -51,15 +51,15 @@
     color: #2d2d2d;
     border-radius: 2px;
 }
-.contact-left textarea{
+.login-left textarea{
     height: 140px;
     padding-top: 15px;
     border-radius: 2px;
 }
-.contact-inputs:focus{
+.login-inputs:focus{
     border: 2px solid #e6955b;
 }
-.contact-inputs::placeholder{
+.login-inputs::placeholder{
     color: #a9a9a9;
 }
 
@@ -105,22 +105,21 @@
 }
 
 
-.contact-right{
+.login-right{
     margin-left: -10px;
     border-radius: 2px;
 }
-.contact-right img{
+.login-right img{
     height: 550px;
     width: 470px;
     align-items: center;
 }
 
 @media (max-width: 955px){
-    .contact-inputs{
+    .login-inputs{
         width: 70vw;
     }
-    .contact-right{
+    .login-right{
         display: none;
     }
 }
-

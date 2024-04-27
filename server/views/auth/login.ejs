@@ -1,57 +1,45 @@
 <%- include('../partials/header-pages'); -%>
 <%- include('../partials/nav-pages'); -%>
-  <main>
-    <div class="main">
-      <div class="container">
-        <%- include('../partials/messages');%>
-
-          <div class="card bg-light" id="signup">
-            <article class="card-body mx-auto">
-              <h4 class="card-title mt-3 text-center">Login</h4>
-              <p class="text-center">Please use your credentials to log in</p>
-
-              <form action="/auth/login" autocomplete="off" method="POST">
-
-                <div class="form-group input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                  </div>
-                  <input name="username" class="form-control" placeholder="Username" type="text">
-                </div> <!-- form-group// -->
-
-                <div class="form-group input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                  </div>
-                  <input class="form-control" name="password" placeholder="Password" type="password"
-                    autocomplete="new-password">
-                </div> <!-- form-group// -->
-
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="rememberme" name="remember" value="1">
-                  <label class="form-check-label" for="rememberme">Remember me</label>
-                </div>
-
-                <div class="form-group">
-                  <button type="submit" class="btn btn-primary btn-block"> Login </button>
-                </div> <!-- form-group// -->
-                <p class="divider-text">
-                  <span class="bg-light">OR</span>
-                </p>
-                <p>
-                  <a href="/auth/github" class="btn btn-block btn-github"> <i class="fab fa-github"></i>   Log in via
-                    GitHub</a>
-                </p>
-                <p class="divider-text">
-                  <span class="bg-light">You don't have an account already?</span>
-                </p>
-                <p class="text-center">
-                  <a class="btn btn-block btn-secondary" href="/auth/register">Register</a>
-                </p>
-              </form>
-            </article>
+<div class="main">
+  <div class="login-container">
+      <form action="/auth/login" method="post" autocomplete="off" id="loginForm" class="login-left">
+          <div class="login-left-title">
+              <h2>Login</h2>
+              <hr>
           </div>
+
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Username" class="login-inputs" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Your Password" class="login-inputs" required>
+
+          <div class="form-check">
+            <label class="form-check-label" for="rememberme">Remember me:</label>
+            <input type="checkbox" class="form-check-input" id="rememberme" name="remember" value="1">
+          </div>
+          
+          <div class="button-container">
+              <button class="button" type="submit">Submit</button>
+          </div>
+          
+
+          <div class="register">
+            <span class="bg-light">You don't have an account already?</span>
+            <p class="text-center">
+              <a class="btn btn-block btn-secondary" href="/auth/register">Register</a>
+            </p>
+          </div>
+
+      </form>
+      <div class="login-right">
+          <img src="../images/pasta.jpg" alt="">
       </div>
-    </div>
-  </main>
+  </div>
+
+
+
+</div>
+</div>
+
   <%- include('../partials/footer-pages'); -%>

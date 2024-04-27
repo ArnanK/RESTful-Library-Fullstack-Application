@@ -8,6 +8,7 @@ module.exports = () => {
       page: 'about-pages',
       stylesheet: 'about.css',
       title: 'Recipes-About',
+      auth: false,
     });
   });
 
