@@ -37,6 +37,24 @@ const userSchema = mongoose.Schema(
       unique: true,
       default: () => crypto.randomBytes(20).toString('hex'),
     },
+    favorites: [
+      {
+        bookTitle: {
+          type: String,
+          required: true,
+        },
+        bookAuthor: {
+          type: String,
+          required: true,
+          unique: false,
+        },
+        bookISBN: {
+          type: String,
+          required: true,
+          unique: false,
+        },
+      },
+    ],
   },
   {
     timestamps: true,
