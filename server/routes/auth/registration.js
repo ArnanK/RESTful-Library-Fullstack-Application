@@ -12,7 +12,11 @@ module.exports = () => {
    * GET route to display the registration form
    */
   router.get('/register', (req, res) => {
-    res.render('auth/registration', { page: 'registration' });
+    res.render('auth/registration', {
+      page: 'registration',
+      title: 'registration',
+      stylesheet: 'main.css',
+    });
   });
 
   /**
