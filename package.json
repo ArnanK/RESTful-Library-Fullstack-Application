@@ -9,6 +9,7 @@
     "start": "node ./server/bin/start"
   },
   "dependencies": {
+    "axios": "^1.6.8",
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.4",
     "cookie-session": "^1.4.0",
