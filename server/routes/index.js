@@ -10,23 +10,23 @@ const router = Router();
 // This module returns a function and this allows you to pass parameters down the routing chain
 module.exports = (params) => {
 
-  router.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname, '../html', 'home.html'));
+  router.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../pages', 'home.html'));
   })
 
   router.get('/favorites', (req, res) => {
-    res.sendFile(path.join(__dirname, '../html', 'favorites.html'));
+    res.sendFile(path.join(__dirname, '../pages', 'favorites.html'));
   })
 
   router.get('/contact', (req, res) => {
-    res.sendFile(path.join(__dirname, '../html', 'contact.html'));
+    res.sendFile(path.join(__dirname, '../pages', 'contact.html'));
   })
 
   router.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname, '../html', 'about.html'));
+    res.sendFile(path.join(__dirname, '../pages', 'about.html'));
   })
   /* GET index page. */
-  router.get('/', (req, res) => {
+  router.get('/playground', (req, res) => {
     res.render('index', { page: 'index' });
   });
 
