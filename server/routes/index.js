@@ -17,7 +17,11 @@ module.exports = (params) => {
   });
 
   router.get('/myaccount', (req, res) => {
-    res.render('myaccount', { page: 'myaccount' });
+    res.render('myaccount', {
+      page: 'myaccount',
+      title: 'My Account',
+      stylesheet: 'main.css',
+    });
   });
 
   // This delegates everything under /auth to the respective routing module.
