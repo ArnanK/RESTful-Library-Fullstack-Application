@@ -3,11 +3,28 @@ const cors = require('cors');
 const authRouter = require('./auth');
 const apiRouter = require('./api');
 const playgroundRouter = require('./playground');
+const path = require('path');
 
 const router = Router();
 
 // This module returns a function and this allows you to pass parameters down the routing chain
 module.exports = (params) => {
+
+  router.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, '../html', 'home.html'));
+  })
+
+  router.get('/favorites', (req, res) => {
+    res.sendFile(path.join(__dirname, '../html', 'favorites.html'));
+  })
+
+  router.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, '../html', 'contact.html'));
+  })
+
+  router.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, '../html', 'about.html'));
+  })
   /* GET index page. */
   router.get('/', (req, res) => {
     res.render('index', { page: 'index' });

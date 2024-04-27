@@ -1,0 +1,37 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+.about-container {
+    width: 100%;
+    max-width: 50%; 
+    margin: 0 auto; 
+    margin-top: -300px;
+    padding: 0; 
+}
+
+.about-image {
+    display: block;
+    width: 100%; 
+    height: auto; 
+    margin: auto; 
+}
+
+.about-content {
+    background: #fff; 
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    margin-bottom: 30px; 
+}
+
+h1 {
+    text-align: center;
+    color: #333; 
+}
+
+.page {
+    margin: 0;
+    padding: 0;
+}

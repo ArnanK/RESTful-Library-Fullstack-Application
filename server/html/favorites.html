@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../public/stylesheets/style.css">
+        <link rel="stylesheet" href="../../public/stylesheets/favorites.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    </head>
+    <body>
+        <nav>
+            <div class="leftNav">
+                <a href="/" class="brand">
+                    <img src="../images/chef-hat-png-1.png" alt="Recipes" class="logo">
+                    <h1>Recipes</h1>
+                </a>
+                <i class="fa fa-bars" id="menuButton"></i>
+                <ul id="list" class="">
+                    <li><a href="/about"><i class="fa-solid fa-circle-info"></i>&nbsp;<b>About</b></a></li>
+                    <li><a href="/favorites"><i class="fa-solid fa-heart"></i>&nbsp;<b>Our Favorites</b></a></li>
+                    <li><a href="/contact"><i class="fa-solid fa-inbox"></i>&nbsp;<b>Contact</b></a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <form action="/search" method="GET">
+                    <input type="text" id="searchInput" class="input" name="query" placeholder="Search..." required>
+                    <button class="btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </nav>
+
+        <div class="page">
+            <div class="menu">
+                <ul>
+                    <li><a href="/"><i class="fa-solid fa-house"></i>&nbsp;<b>Home</b></a></li>
+                    <li><a href="/about"><i class="fa-solid fa-circle-info"></i>&nbsp;<b>About</b></a></li>
+                    <li><a href="/favorites"><i class="fa-solid fa-heart"></i>&nbsp;<b>Our Favorites</b></a></li>
+                    <li><a href="/contact"><i class="fa-solid fa-inbox"></i>&nbsp;<b>Contact</b></a></li>
+                </ul>
+            </div>
+
+            <div class="main">
+
+                <!--Expanding Cards-->
+                <h1 class="content-card-heading">Our Favorite Recipes</span></h1>
+                <div class="content">
+                    <div class="container">
+                        <a class="panel" href="https://www.food.com/recipe/green-yellow-squash-linguini-w-shrimp-scampi-471158" target="_blank" style="background-image: url('https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/47/11/58/xcbHanqGRVuBjofzf61Y_yellow-squash-zucchini-shrimp-scampi-8114.jpg')">
+                            <h3>Yellow Squash Linguini with Shrimp Scamp</h3>
+                        </a>
+                        <a class="panel" href="https://www.food.com/recipe/balsamic-chicken-and-mushrooms-54726" target="_blank" style="background-image: url('https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/54/72/6/JHPjkwTS0OLeAtIL8gp4_chicken%20and%20mushrooms-2.jpg')">
+                            <h3>Balsamic Chicken and Mushrooms</h3>
+                        </a>
+                        <a class="panel" href="https://www.food.com/recipe/stuffed-bell-peppers-vegetarian-or-beef-153170" target="_blank" style="background-image: url('https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/15/31/70/7KAkq3kSSyWtsBQrNVOQ_0S9A1503.jpg')">
+                            <h3>Stuffed Bell Peppers</h3>
+                        </a>
+                        <a class="panel" href="https://www.food.com/recipe/crustless-spinach-quiche-56836" target="_blank" style="background-image: url('https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/56/83/6/HbDn5WWBSiSH95U27661_0S9A2644.jpg')">
+                            <h3>Crustless Spinach Quiche</h3>
+                        </a>
+                        <a class="panel" href="https://www.food.com/recipe/baby-bok-choy-with-garlic-104240" target="_blank" style="background-image: url('https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/10/42/40/74Ds9kCVTmKmlTEjc3Ps_DSC_9327.jpg')">
+                            <h3>Baby Bok Choy with Garlic</h3>
+                        </a>
+                    </div>
+                </div>
+                <!--Videos-->
+
+                <section class="videos">
+                    <h1 class="videos-heading">Our Favorite Videos</span></h1>
+                    <div class="videos-wrapper">
+                        <div class="video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FTociictyyE?si=UnImzdI7QCPZMweA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                            
+                            <h3>Basic Cooking Tips</h3>
+                        </div>
+                        <div class="video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/LzWb_P4lYgA?si=dKXt3h8Un7fSVvrS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                            
+                            <h3>Speed Cooking Tutorial</h3>
+                        </div>
+
+                        <div class="video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/jwWpTAXu-Sg?si=F7nuc59h3dhhaftU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                            
+                            <h3>How to Eat Healthy</h3>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+
+            
+        </div>
+
+        <footer>
+            <div class="footer-text">
+                <p>Powered By Edaman API</p>
+                <hr>
+                <p>Arnan Khan, Aviv Cohen, Ishrat Amin, Mohammed Zian Hassan, Eric Yang </p>
+            </div>
+        </footer>
+
+        <script src="../javascripts/searchBar.js" async defer></script>
+        <script src="../javascripts/favorites.js"></script>
+
+    </body>
+</html>

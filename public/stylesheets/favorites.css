@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+/* --------------Expanding Cards------------- */
+
+
+.content{
+  display:flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.content>.container {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+}
+.content-card-heading{
+  margin-top: 50px;
+}
+.container {
+  display: flex;
+  width: 90vw;
+  
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 8px;
+  color: #fff;
+  margin-bottom: 40px;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+/*-----------------Videos-----------------*/
+
+.videos-heading, .content-card-heading{
+  text-align: center;
+ 
+}
+
+.videos-wrapper{
+  display: flex;
+  width: 85%;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.video{
+  padding: 2rem 1rem;
+  background: #fff;
+  position: relative;
+  display: flex;
+  width: 65%;
+  height: 315px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+  transition: 0.5s ease-in-out;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.video iframe{
+  height: 100%;
+  width: 90%;
+}
+
+
+/* ------------------Mobile Navigation----------------- */
+@media (max-width: 1055px){
+
+    .videos-wrapper{
+      flex-wrap: wrap;
+    }
+}
