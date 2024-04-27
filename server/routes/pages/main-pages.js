@@ -7,6 +7,7 @@ module.exports = () => {
     res.render('pages/main-pages', {
       page: 'main-pages',
       stylesheet: 'home.css',
+      title: 'Recipes-Home',
     });
   });
 
