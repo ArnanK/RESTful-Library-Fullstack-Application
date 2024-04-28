@@ -47,7 +47,7 @@
                                             <td><%= books[i].bookISBN %></td>
                                         </tr>
                                     </table>
-                                    <form action="/api/addBook" method="POST" enctype="application/x-www-form-urlencoded">
+                                    <form action="/api/user/add-to-favorites" method="POST" enctype="application/x-www-form-urlencoded">
                                         <input type="hidden" name="bookTitle" value="<%= books[i].bookTitle %>">
                                         <input type="hidden" name="bookAuthor" value="<%= books[i].bookAuthor %>">
                                         <input type="hidden" name="bookISBN" value="<%= books[i].bookISBN %>">
