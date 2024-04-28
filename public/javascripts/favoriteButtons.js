@@ -1,20 +1,21 @@
 // eslint-disable-next-line no-undef
-const buttons = document.querySelectorAll('.btn.add-to-favorites');
+const buttons = document.querySelectorAll('.btn.favorites');
 
 buttons.forEach((button) => {
   button.addEventListener('click', async (event) => {
     event.preventDefault();
     const form = event.target.closest('form');
     if (form) {
-      const formData = {
-        bookTitle: form.querySelector('input[name="bookTitle"]').value,
-        bookAuthor: form.querySelector('input[name="bookAuthor"]').value,
-        bookISBN: form.querySelector('input[name="bookISBN"]').value,
-        bookThumbnail: form.querySelector('input[name="bookThumbnail"]').value,
-      };
+      const formData = {};
+      // eslint-disable-next-line no-undef
+      const formEntries = new FormData(form).entries();
+      // eslint-disable-next-line no-restricted-syntax
+      for (const [key, value] of formEntries) {
+        formData[key] = value;
+      }
       // eslint-disable-next-line no-undef
       await fetch(form.action, {
-        method: 'POST',
+        method: form.method,
         headers: {
           'Content-Type': 'application/json',
         },
@@ -22,9 +23,9 @@ buttons.forEach((button) => {
       })
         .then((res) => {
           if (res.ok) {
-            console.log('Book successfully added to favorites');
+            console.log('Request successfully handled');
           } else {
-            console.log('Failed to add book to favorites');
+            console.log('Failed to handle request');
           }
         })
         .catch((err) => {
