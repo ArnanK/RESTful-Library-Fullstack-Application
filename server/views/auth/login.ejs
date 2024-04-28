@@ -1,6 +1,7 @@
 <%- include('../partials/header-pages'); -%>
 <%- include('../partials/nav-pages'); -%>
 <div class="main">
+  <%- include('../partials/messages');%>
   <div class="login-container">
       <form action="/auth/login" method="post" autocomplete="off" id="loginForm" class="login-left">
           <div class="login-left-title">
@@ -31,6 +32,7 @@
             </p>
           </div>
 
+          <div><a href="/auth/resetpassword">Forgot Password?</a></div>
       </form>
       <div class="login-right">
           <img src="../images/pasta.jpg" alt="">
@@ -42,4 +44,10 @@
 </div>
 </div>
 
-  <%- include('../partials/footer-pages'); -%>
+<%- include('../partials/footer-pages') %>
+
+<script src="../javascripts/searchBar.js" async defer></script>
+<!--<script src="../javascripts/contact.js" async defer></script>-->
+<script src="../javascripts/ripple.js" async defer></script>
+</body>
+</html>

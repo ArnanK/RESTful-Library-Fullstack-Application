@@ -11,7 +11,9 @@ module.exports = () => {
    * GET route to display the login form
    */
   router.get('/resetpassword', (req, res) => {
-    res.render('auth/resetpassword', { page: 'resetpassword' });
+
+
+    res.render('auth/resetpassword', { page: 'resetpassword', title:'resetPassword', stylesheet: 'login.css', });
   });
 
   /**
@@ -42,13 +44,29 @@ module.exports = () => {
             const resetToken = await UserService.createPasswordResetToken(
               user.id
             );
+
+            //if this request was made from the userAccount Page, direct to changePassword
+            if(req.isAuthenticated()){
+              return res.render('auth/changepassword', {
+                page: 'resetpassword',
+                title: 'resetPassword',
+                stylesheet: 'login.css',
+                userId: user.id,
+                resetToken: resetToken,
+              });
+            }
+
           }
+          
+
         }
 
         if (errors.length) {
           // Render the page again and show the errors
           return res.render('auth/resetpassword', {
             page: 'resetpassword',
+            title: 'resetPassword',
+            stylesheet: 'login.css',
             data: req.body,
             errors,
           });
@@ -62,7 +80,10 @@ module.exports = () => {
         /**
          * @todo: On success, redirect the user to some other page, like the login page
          */
-        return res.redirect('/');
+
+          return res.redirect('/home');
+        
+        
       } catch (err) {
         return next(err);
       }
@@ -91,6 +112,8 @@ module.exports = () => {
 
       return res.render('auth/changepassword', {
         page: 'resetpassword',
+        title: 'resetPassword',
+        stylesheet: 'login.css',
         userId: req.params.userId,
         resetToken: req.params.resetToken,
       });
@@ -136,6 +159,8 @@ module.exports = () => {
           return res.render('auth/changepassword', {
             page: 'resetpassword',
             data: req.body,
+            title: 'resetPassword',
+            stylesheet: 'login.css',
             userId: req.params.userId,
             resetToken: req.params.resetToken,
             errors,
@@ -151,12 +176,16 @@ module.exports = () => {
           text: 'Your password was successfully changed!',
           type: 'success',
         });
-        return res.redirect('/auth/login');
+        if(req.isAuthenticated()){
+          return res.redirect('/home');
+        }else{
+          return res.redirect('/auth/login');
+        }
       } catch (err) {
         return next(err);
       }
     }
   );
-
+  
   return router;
 };

@@ -21,7 +21,7 @@ module.exports = () => {
   });
 
   router.post('/remove-from-favorites', async (req, res, next) => {
-    console.log(req.body.bookISBN);
+    //console.log(req.body.bookISBN);
     try {
       await UserService.removeBook(req.user.id, req.body.bookISBN);
       return res.redirect('/myaccount');

@@ -1,0 +1,81 @@
+.main{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.favorites{
+    margin: 80px 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.favorites a{
+    text-decoration: none;
+    color: black;
+}
+
+.account{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card-account{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    height: 300px;
+    width: 800px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    overflow: hidden;
+}
+
+
+.card{
+    height: 400px;
+    width: 270px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    overflow: hidden;
+    
+    transition: transform ease 300ms;
+}
+
+.card:hover{
+    height: 400px;
+    width: 270px;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    overflow: hidden;
+    
+    transform: translateY(-10px);
+}
+
+.card img{
+    overflow: hidden;
+    height: 50%;
+    width: 50%;
+}
+
+.card .text{
+    margin-left: 10px;
+}
+
+.card>.text>h4,.card>.text>h6{
+    margin-top: 4px;
+    margin-bottom: 4px;
+} 
