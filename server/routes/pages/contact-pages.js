@@ -6,8 +6,9 @@ module.exports = () => {
   router.get('/contact', (req, res) => {
     res.render('pages/contact-pages', {
       page: 'contact-pages',
-      stylesheet: 'contact.css',
+      stylesheet: 'login.css',
       title: 'Recipes-Contact',
+      auth: false,
     });
   });
 
