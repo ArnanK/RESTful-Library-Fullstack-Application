@@ -138,6 +138,12 @@ class UserService {
   static async deleteUser(id) {
     return UserModel.findByIdAndDelete(id);
   }
+
+  static async addItem(userId, bookTitle, bookAuthor, bookISBN, bookThumbnail) {
+    const user = await UserModel.findById(userId);
+    user.favorites.push({ bookTitle, bookAuthor, bookISBN, bookThumbnail });
+    return user.save();
+  }
 }
 
 module.exports = UserService;

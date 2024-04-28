@@ -8,17 +8,19 @@
           <article class="card-body mx-auto">
             <h4 class="card-title mt-3 text-center">My Account</h4>
             <p class="text-center">This is just a dump of the user object</p>
-            <code>
-            <%=user%>
-          </code>
+            <ul>
+            <% if (user.favorites.length > 0) {%>
+                <% for(let i = 0; i < user.favorites.length; i++ ) {%>
+                    <li>
+                        <img src="<%= user.favorites[i].bookThumbnail %>"
+                            alt="<%= user.favorites[i].bookTitle %>">
+                        <p>Title: <%= user.favorites[i].bookTitle%></p>
+                        <p>Author: <%= user.favorites[i].bookAuthor%></p>
+                    </li>
+                <% } %>
+            <% } %>
+            </ul>
 
-            <%if(!user.githubId){%>
-              <hr />
-              <div class="mx-auto text-center">
-                <a href="/auth/github" class="btn btn-social btn-github"> <i class="fab fa-github"></i> Connect
-                  account with GitHub</a>
-              </div>
-              <%};%>
           </article>
         </div>
     </div>

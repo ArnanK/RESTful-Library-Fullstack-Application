@@ -2,6 +2,7 @@ const { Router } = require('express');
 
 const router = Router();
 const todolistRouter = require('./todolist');
+const userRouter = require('./user');
 
 module.exports = (params) => {
   router.post('/login', async (req, res, next) => {
@@ -17,6 +18,6 @@ module.exports = (params) => {
   });
 
   router.use('/todolist', todolistRouter(params));
-
+  router.use('/user', userRouter(params));
   return router;
 };

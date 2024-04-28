@@ -1,6 +1,5 @@
 const { Router } = require('express');
 const cors = require('cors');
-const path = require('path');
 const authRouter = require('./auth');
 const apiRouter = require('./api');
 const playgroundRouter = require('./playground');

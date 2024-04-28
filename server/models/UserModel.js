@@ -53,6 +53,10 @@ const userSchema = mongoose.Schema(
           required: true,
           unique: false,
         },
+        bookThumbnail: {
+          type: String,
+          required: true,
+        },
       },
     ],
   },
