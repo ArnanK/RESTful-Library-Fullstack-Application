@@ -5,6 +5,7 @@ const router = Router();
 
 module.exports = () => {
   router.post('/add-to-favorites', async (req, res, next) => {
+    // console.log('Request received', req.method, req.url, req.headers);
     try {
       await UserService.addBook(
         req.user.id,
@@ -13,7 +14,7 @@ module.exports = () => {
         req.body.bookISBN,
         req.body.bookThumbnail
       );
-      return res.redirect('/home');
+      return res.status(200).send('Book added to favorites');
     } catch (err) {
       return next(err);
     }
