@@ -1,6 +1,5 @@
 const { Router } = require('express');
 const cors = require('cors');
-const path = require('path');
 const authRouter = require('./auth');
 const apiRouter = require('./api');
 const playgroundRouter = require('./playground');
@@ -17,7 +16,7 @@ module.exports = (params) => {
   });
 
   router.get('/myaccount', (req, res) => {
-    res.render('myaccount', {
+    res.render('auth/myaccount', {
       page: 'myaccount',
       title: 'My Account',
       stylesheet: 'main.css',

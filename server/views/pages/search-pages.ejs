@@ -1,0 +1,71 @@
+<%- include('../partials/header-pages') %>
+<%- include('../partials/nav-pages') %>
+    <div class="main">
+        <div class="search-bar">
+            <form action="/search" method="GET">
+                <label for="searchInput">Explore More books</label>
+                <input type="text" id="searchInput" class="input" name="query" placeholder="Search..." required>
+
+<!--                <div class="search-bar-checkbox">-->
+<!--                    <label>Diet - </label>-->
+<!--                    <input type="checkbox" id="high-fiber" name="diet" value="high-fiber">-->
+<!--                    <label for="high-fiber">High-Fiber</label>-->
+<!--                    <input type="checkbox" id="high-protein" name="diet" value="high-protein">-->
+<!--                    <label for="high-fiber">High-Protein</label>-->
+<!--                    <input type="checkbox" id="low-carb" name="diet" value="low-carb">-->
+<!--                    <label for="high-fiber">Low-Carb</label>-->
+<!--                </div>-->
+<!--                <div class="search-bar-radio">-->
+<!--                    <label>Cuisine Type - </label>-->
+<!--                    <input type="radio" id="american" name="cuisineType" value="American">-->
+<!--                    <label for="american">American</label>-->
+<!--                    <input type="radio" id="indian" name="cuisineType" value="Indian">-->
+<!--                    <label for="american">Indian</label>-->
+<!--                    <input type="radio" id="mediterranean" name="cuisineType" value="Mediterranean">-->
+<!--                    <label for="american">Mediterranean</label>-->
+<!--                </div>-->
+                <input type="submit">
+            </form>
+        </div>
+
+        <div class="content">
+            <% if (books.length > 0) { %>
+                <h3 class="results">Results: <%= books.length %> </h3>
+                <div class="books">
+                    <% for(let i=0; i < books.length; i++){ %>
+                            <div class="card">
+                                <div class="text">
+                                    <img src="<%= books[i].bookThumbnail%>">
+                                    <h4><%= books[i].bookTitle %></h4>
+                                    <table>
+                                        <tr>
+                                            <td>Author</td>
+                                            <td><%= books[i].bookAuthor %></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ISBN</td>
+                                            <td><%= books[i].bookISBN %></td>
+                                        </tr>
+                                    </table>
+                                    <form action="/api/addBook" method="POST" enctype="application/x-www-form-urlencoded">
+                                        <input type="hidden" name="bookTitle" value="<%= books[i].bookTitle %>">
+                                        <input type="hidden" name="bookAuthor" value="<%= books[i].bookAuthor %>">
+                                        <input type="hidden" name="bookISBN" value="<%= books[i].bookISBN %>">
+                                        <input type="hidden" name="bookThumbnail" value="<%= books[i].bookThumbnail %>">
+                                        <button type="submit">Add to Favorites</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </a>
+                    <% } %>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer-pages') %>
+
+<script src="../javascripts/searchBar.js" async defer></script>
+</body>
+</html>

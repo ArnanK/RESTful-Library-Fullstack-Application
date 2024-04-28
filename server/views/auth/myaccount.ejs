@@ -1,0 +1,37 @@
+<%- include('../partials/header-pages'); -%>
+<%- include('../partials/nav-pages'); -%>
+  <main>
+    <div class="container">
+      <%- include('../partials/messages');%>
+
+        <div class="card bg-light" id="signup">
+          <article class="card-body mx-auto">
+            <h4 class="card-title mt-3 text-center">My Account</h4>
+            <p class="text-center">This is just a dump of the user object</p>
+            <ul>
+            <% if (user.favorites.length > 0) {%>
+                <% for(let i = 0; i < user.favorites.length; i++ ) {%>
+                    <li>
+                        <img src="<%= user.favorites[i].bookThumbnail %>"
+                            alt="<%= user.favorites[i].bookTitle %>">
+                        <p>Title: <%= user.favorites[i].bookTitle%></p>
+                        <p>Author: <%= user.favorites[i].bookAuthor%></p>
+                        <form action="/api/removeBook/" method="POST" enctype="application/x-www-form-urlencoded">
+                          <input type="hidden" name="bookISBN" value="<%= user.favorites[i].bookISBN %>">
+                          <button type="submit">Remove From Favorites</button>
+                        </form>
+                    </li>
+                <% } %>
+            <% } %>
+            </ul>
+
+          </article>
+        </div>
+    </div>
+  </main>
+  <%- include('../partials/footer-pages'); -%>
+  <script src="../javascripts/searchBar.js" async defer></script>
+<!--<script src="../javascripts/contact.js" async defer></script>-->
+<script src="../javascripts/ripple.js" async defer></script>
+</body>
+</html>

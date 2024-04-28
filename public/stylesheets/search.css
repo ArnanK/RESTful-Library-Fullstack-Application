@@ -73,7 +73,7 @@
     margin-top: 10px;
 }
 
-.recipes{
+.books{
     margin: 80px 20px;
     margin-top: 30px;
     display: flex;
@@ -84,7 +84,7 @@
     column-gap: 20px;
 }
 
-.recipes a{
+.books a{
     text-decoration: none;
     color: black;
 }
@@ -116,8 +116,8 @@
 
 .card img{
     overflow: hidden;
-    height: 70%;
-    width: 100%;
+    height: 50%;
+    width: 50%;
 }
 
 .card .text{
