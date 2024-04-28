@@ -16,7 +16,7 @@ module.exports = (params) => {
   });
 
   router.get('/myaccount', (req, res) => {
-    res.render('myaccount', {
+    res.render('auth/myaccount', {
       page: 'myaccount',
       title: 'My Account',
       stylesheet: 'main.css',

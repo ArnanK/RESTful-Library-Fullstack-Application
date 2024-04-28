@@ -5,15 +5,13 @@ const router = Router();
 
 module.exports = () => {
   router.post('/', async (req, res, next) => {
+    console.log(req.body.bookISBN);
     try {
-      await UserService.addItem(
+      await UserService.removeBook(
         req.user.id,
-        req.body.bookTitle,
-        req.body.bookAuthor,
         req.body.bookISBN,
-        req.body.bookThumbnail
       );
-      return res.status(201).json({ status: 'created' });
+      return res.redirect('/myaccount');
     } catch (err) {
       return next(err);
     }

@@ -139,10 +139,59 @@ class UserService {
     return UserModel.findByIdAndDelete(id);
   }
 
-  static async addItem(userId, bookTitle, bookAuthor, bookISBN, bookThumbnail) {
+  /**
+   * Adds book into Favorite section for user.
+   * @param {*} userId 
+   * @param {*} bookTitle 
+   * @param {*} bookAuthor 
+   * @param {*} bookISBN 
+   * @param {*} bookThumbnail 
+   * @returns 
+   */
+  static async addBook(userId, bookTitle, bookAuthor, bookISBN, bookThumbnail) {
     const user = await UserModel.findById(userId);
-    user.favorites.push({ bookTitle, bookAuthor, bookISBN, bookThumbnail });
-    return user.save();
+
+    try{
+      this.checkDuplicate(user.favorites,bookISBN);
+      user.favorites.push({ bookTitle, bookAuthor, bookISBN, bookThumbnail });
+      await user.save();
+      return user;
+    }catch(error){ //catches errors
+      console.log(error);
+      return user;
+    }
+    
+  }
+  //throw err if duplicate
+  static checkDuplicate(favoritesList, bookISBN){
+    favoritesList.forEach(book=>{
+      if(book.bookISBN === bookISBN){
+        throw new Error("Duplicate");
+      }
+    })
+    
+  }
+
+
+/**
+ * The function `removeBook` removes a book from a user's favorites list based on the book's ISBN.
+ * @param userId - The `userId` parameter is the unique identifier of the user whose favorite book
+ * needs to be removed.
+ * @param bookISBN - The `bookISBN` parameter in the `removeBook` function is the unique identifier for
+ * the book that you want to remove from the user's favorites list.
+ * @returns The `removeBook` function is returning the updated `user` object after removing the book
+ * with the specified `bookISBN` from the user's favorites list.
+ */
+  static async removeBook(userId, bookISBN){
+    const user = await UserModel.findById(userId);
+    user.favorites.forEach(book => {
+      if(book.bookISBN == bookISBN){
+        let bookIndex = user.favorites.indexOf(book);
+        user.favorites.splice(bookIndex,1);
+        return user.save();
+      }
+    });
+    return user;
   }
 }
 

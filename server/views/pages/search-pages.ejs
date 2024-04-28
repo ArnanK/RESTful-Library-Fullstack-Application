@@ -1,16 +1,5 @@
 <%- include('../partials/header-pages') %>
 <%- include('../partials/nav-pages') %>
-
-<div class="page">
-    <div class="menu">
-        <ul>
-            <li><a href="/"><i class="fa-solid fa-house"></i>&nbsp;<b>Home</b></a></li>
-            <li><a href="/about"><i class="fa-solid fa-circle-info"></i>&nbsp;<b>About</b></a></li>
-            <li><a href="/favorites"><i class="fa-solid fa-heart"></i>&nbsp;<b>Our Favorites</b></a></li>
-            <li><a href="/contact"><i class="fa-solid fa-inbox"></i>&nbsp;<b>Contact</b></a></li>
-        </ul>
-    </div>
-
     <div class="main">
         <div class="search-bar">
             <form action="/search" method="GET">
@@ -58,7 +47,7 @@
                                             <td><%= books[i].bookISBN %></td>
                                         </tr>
                                     </table>
-                                    <form action="/api/user" method="POST" enctype="application/x-www-form-urlencoded">
+                                    <form action="/api/addBook" method="POST" enctype="application/x-www-form-urlencoded">
                                         <input type="hidden" name="bookTitle" value="<%= books[i].bookTitle %>">
                                         <input type="hidden" name="bookAuthor" value="<%= books[i].bookAuthor %>">
                                         <input type="hidden" name="bookISBN" value="<%= books[i].bookISBN %>">
