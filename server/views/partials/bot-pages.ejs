@@ -1,0 +1,25 @@
+<div id="bot">
+<div class="parent" style="position:fixed; bottom:30px; right:30px;">
+    <button id="init"><!--<img src="chatbot.png" alt="Button Image">-->START CHAT</button>
+</div>
+<div id="test" style="position:fixed; bottom:70px; right:30px; display:none;">
+    <div class="child" id="chatbot">
+        <div class="header">
+            <div class="h-child" style="display:flex; align-items:center;">
+                <div>
+                    <span class="name" style="font-weight: 600;">Chatbot</span>
+                    <br>
+                    <span style="color:lawngreen">online</span>
+                </div>
+            </div>
+            <div>
+                <button class="refBtn"><i class="fa fa-refresh" onclick="initChat()"></i></button>
+            </div>
+        </div>
+        
+        <div id="chat-box">
+            <% /* This is where dynamic content will be inserted */ %>
+        </div>
+    </div>
+</div>
+</div>
