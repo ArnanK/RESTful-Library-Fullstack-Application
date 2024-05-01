@@ -1,18 +1,19 @@
 <%- include('../partials/header-pages') %>
 <%- include('../partials/nav-pages') %>
+<link rel="stylesheet" href="../stylesheets/udemyday5.css">
 
+<div class="main">
+<div class="block">
 <div class="about-container">
-    <link rel="stylesheet" href="../stylesheets/udemyday5.css">
-    <link rel="stylesheet" href="../stylesheets/udemyday40.css">
 
-    <h1>About Us</h1>
+
+    <h1 style="color:white">About Us</h1>
     <div class="bg"></div> <!-- Background for the blur effect -->
-    <div class="loading-text">0%</div> <!-- Text that shows loading percentage -->
+    <div class="loading-text" style="display: none;">0%</div> <!-- Text that shows loading percentage -->
 
-    <button id="btn" class="magic" style="position: relative; top: 500px;">Toggle Effect</button>
 
     <div class="content-effect-container">
-    <div id="boxes" class="boxes"></div>
+    
     <div class="about-content">
         <p>Welcome to your ultimate destination for discovering and sharing recipes. Our mission is to empower home cooks with a wide variety of easy-to-follow recipes, curated from all over the globe. Whether you're looking for a quick weekday dinner or a challenging weekend project, our collection of recipes is designed to inspire creativity in the kitchen.</p>
         <p>Founded by a team of food enthusiasts, our website is driven by a passion for cooking and sharing meals. We believe in the power of food to bring people together and aim to create a community where users can share their culinary adventures and discoveries.</p>
@@ -26,6 +27,7 @@
         <p>Join us on our journey to make cooking more accessible and enjoyable for everyone. Explore new flavors, share your creations, and become part of our growing community of food lovers.</p>
         </div>
     </div>
+</div>
 </div>
 
 <%- include('../partials/footer-pages') %>

@@ -5,7 +5,7 @@
     /* Colors */
     /* Color mode HSL(hue, Saturation, lightness) */
     --first-color: hsl(230, 62%, 56%);
-    --title-color: hsl(230, 70%, 16%);
+    --title-color: hsl(36, 70%, 16%);
     --text-color: hsl(230, 16%, 45%);
     --border-color: hsl(230, 50%, 90%);
     --white-color: hsl(0, 0%, 100%);
@@ -55,6 +55,7 @@
   }
   html {
     scroll-behavior: smooth;
+    height: 100vh;
   }
   body,
   input,
@@ -90,6 +91,11 @@
     display: block;
     max-width: 100%;
     height: auto;
+  }
+
+  .block{
+    display: block;
+    height: 100vh;
   }
   
 /* -----------------Root------------------------------- */
@@ -239,6 +245,8 @@ nav.active .leftNav .brand{
     flex-direction: column;
     margin-top: 50px;
     width: 100%;
+    min-height: 100vh;
+    position: relative;   
 }
 
 .page .menu{
@@ -318,9 +326,9 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 230px;
+    height: 150px;
     width: 100%;
-    position: relative; 
+    position: absolute; 
     bottom: 0px; 
 }
 

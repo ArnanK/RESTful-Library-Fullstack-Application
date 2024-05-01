@@ -4,21 +4,9 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: steelblue;
-  color: #fff;
-  font-family: 'Muli', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-}
+
 
 .container {
-  background-color: rgba(0, 0, 0, 0.4);
   padding: 20px 40px;
   border-radius: 5px;
 }
@@ -30,14 +18,12 @@ body {
 
 .container a {
   text-decoration: none;
-  color: lightblue;
 }
 
 .btn {
   cursor: pointer;
   display: inline-block;
   width: 100%;
-  background: lightblue;
   padding: 15px;
   font-family: inherit;
   font-size: 16px;
@@ -71,7 +57,7 @@ body {
   width: 100%;
   padding: 15px 0;
   font-size: 18px;
-  color: #fff;
+  color: #000000;
   position: relative;
   z-index: 100;
 }
@@ -79,7 +65,7 @@ body {
 .form-control input:focus,
 .form-control input:valid {
   outline: 0;
-  border-bottom-color: lightblue;
+  border-bottom-color: rgb(95, 86, 65);
 }
 
 .form-control label {
@@ -98,6 +84,6 @@ body {
 
 .form-control input:focus + label span,
 .form-control input:valid + label span {
-  color: lightblue;
+  color: hsl(36, 77%, 59%);
   transform: translateY(-30px);
 }
