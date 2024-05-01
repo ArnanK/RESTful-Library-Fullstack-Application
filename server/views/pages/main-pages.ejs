@@ -1,195 +1,68 @@
 <%- include('../partials/header-pages') %>
-
 <!--<body>-->
-<%- include('../partials/nav-pages') %>
+    <%- include('../partials/nav-pages') %>
 
-<!--<div class="page">-->
-<!--    <div class="menu">-->
-<!--        <ul>-->
-<!--            <li><a href="/"><i class="fa-solid fa-house"></i>&nbsp;<b>Home</b></a></li>-->
-<!--            <li><a href="/about"><i class="fa-solid fa-circle-info"></i>&nbsp;<b>About</b></a></li>-->
-<!--            <li><a href="/favorites"><i class="fa-solid fa-heart"></i>&nbsp;<b>Our Favorites</b></a></li>-->
-<!--            <li><a href="/contact"><i class="fa-solid fa-inbox"></i>&nbsp;<b>Contact</b></a></li>-->
-<!--        </ul>-->
-<!--    </div>-->
-
-    <div class="main">
-        <!--Landing page-->
-        <section class="landingpage">
-            <div class="content">
-                <div class="landing-heading">
-                    <h1 data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="600">Easy<br> Healthy Recipes</h1>
-                    <p data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400"><b>46 Handpicked Dinner Recipes</b></p>
-                    <a href="https://www.food.com/ideas/low-calorie-dinner-recipes-6321#c-20526" target="_blank"><button class="main-button">View Recipes</button></a>
-                </div>
-                <div class="image">
-                    <img src="../images/main.jpeg" alt="" class="img" data-aos="zoom-in-left" data-aos-duration="3000">
-                </div>
+    <!-- MAIN START -->
+    <main class="main">
+      <!-- HOME START -->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__data">
+            <h1 class="home__title">
+              Browse &<br />
+              Select E-Books
+            </h1>
+            <p class="home__description">
+              Find the best E-books from you favorite writers, explore hundreds
+              of books with all possible categories, take advantage of the 50%
+              discound and much more.
+            </p>
+            <a href="#" class="button">Explore Now</a>
+          </div>
+          <div class="home__images">
+            <div class="home__swiper swiper">
+              <div class="swiper-wrapper">
+                <article class="home__article swiper-slide">
+                  <img
+                    src="../images/home-book-1.png"
+                    alt="image"
+                    class="home__img"
+                  />
+                </article>
+                <article class="home__article swiper-slide">
+                  <img
+                    src="../images/home-book-2.png"
+                    alt="image"
+                    class="home__img"
+                  />
+                </article>
+                <article class="home__article swiper-slide">
+                  <img
+                    src="../images/home-book-3.png"
+                    alt="image"
+                    class="home__img"
+                  />
+                </article>
+                <article class="home__article swiper-slide">
+                  <img
+                    src="../images/home-book-4.png"
+                    alt="image"
+                    class="home__img"
+                  />
+                </article>
+              </div>
             </div>
-        </section>
-        <!--Card Hover Effect-->
-        <section class="card-hover">
-            <hr>
-            <h1 class="card-heading">Easy Recipes for Dinner</h1>
-            <div class="card-wrapper">
-                <div class="card">
-                    <img src="../images/Baked-salmon.jpg"width="350" height="510">
-                    <div class="info">
-                        <h1>Baked Salmon</h1>
-                        <p>Enjoy tender, flaky salmon with just the right seasoning, cooked to perfection in your oven.
-                            No extra steps, no messy cleanup, just delicious fresh salmon made with ease</p>
-                        <a href="/search?query=salmon" class="btn">Read More</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/Chickpea-Curry.jpg" width="350" height="510">
-                    <div class="info">
-                        <h1>Chick Pea Curry</h1>
-                        <p>This Chickpea Curry Recipe is full of flavor!
-                            This recipe is vegan, gluten free and vegetarian. Serve over rice with a side of garlic naan bread!</p>
-                        <a href="/search?query=Chickpea" class="btn">Read More</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/Stuffed-Peppers.jpg"width="350" height="510">
-                    <div class="info">
-                        <h1>Stuffed Peppers</h1>
-                        <p>This classic recipe is easier and faster by using the microwave to par-cook the peppers, saving you about 45 minutes of cook time!
-                            This is a great recipe to use up leftover</p>
-                        <a href="/search?query=Stuffed peppers" class="btn">Read More</a>
-                    </div>
-                </div>
-
-
-            </div>
-        </section>
-        <!--Review section-->
-
-        <section class="review">
-            <hr>
-            <h1 class="review-heading">Customer's Review</h1>
-            <div class="swiper review-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide box">
-                        <img src="../images/pic-1.jpg">
-                        <p>Happiness on a Plate!</p>
-                        <h3>John Deo</h3>
-                        <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide box">
-                        <img src="../images/pic-2.jpg">
-                        <p>Loved it! followed the salmon recipe</p>
-                        <h3>Kyan Mays</h3>
-                        <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="swiper-slide box">
-                        <img src="../images/pic-3.jpg">
-                        <p>My go to unsweetened peanut butter recipe</p>
-                        <h3>Donald Mcguire</h3>
-                        <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide box">
-                        <img src="../images/pic-4.jpg">
-                        <p>Healthy and Delicious</p>
-                        <h3>Kayla Hopper</h3>
-                        <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </section>
-
-        <!--Image Slide-->
-
-        <section class="scroll">
-            <hr>
-            <h1 class="heading">Popular on Breakfast</h1>
-            <div class="gallery-wrap">
-
-                <i class="fa-solid fa-arrow-left" id="backBtn"></i>
-
-                <div class="horizontal-scroll">
-                    <div>
-                        <span><img src="../images/overnight-oats.jpg" alt="Horizontal Image 1"></span>
-                        <span><img src="../images/vegan-chia-pudding.jpg" alt="Horizontal Image 2" ></span>
-                        <span><img src="../images/avocado-toast.jpg" alt="Horizontal Image 3"></span>
-
-                    </div>
-                    <div>
-                        <span><img src="../images/smoothie-bowl.jpg" alt="Horizontal Image 4" ></span>
-                        <span><img src="../images/Breakfast-Egg-Sandwich.jpg" alt="Horizontal Image 5" ></span>
-                        <span><img src="../images/smoothiesbreakfast.jpg" alt="Horizontal Image 6"></span>
-                    </div>
-                </div>
-                <i class="fa-solid fa-arrow-right" id="nextBtn"></i>
-
-            </div>
-        </section>
-        <section class="subscribe">
-            <hr>
-            <div class="small-box">
-                <img src="../images/baked-chicken-wings.jpg" alt="newsletter">
-                <div class="subscription-info">
-                    <h2>Subscribe to get our latest recipes!</h2>
-                    <p>Subscribe to get new posts in your inbox!</p>
-                    <form action="/subscribe" method="post">
-                        <div class="field">
-                            <label for="name"class="input-name-label"><b>Name:</b></label>
-                            <input type="text" class="input-name-field"name="name" placeholder="Enter your name" required><br>
-                        </div>
-                        <div class="field">
-                            <label for="email" class="input-email-label"><b>Email:</b></label>
-                            <input type="email" class="input-email-field" name="email" placeholder="Enter your email" required>
-                        </div>
-                        <button type="submit" class="subscribe-button">SUBSCRIBE</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </div>
-
-
-</div>
-
+          </div>
+        </div>
+      </section>
+      <!-- HOME END -->
 
 <%- include('../partials/footer-pages') %>
 
-<script src="../javascripts/searchBar.js" async defer></script>
-<script src="../javascripts/scroll.js" async defer></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="../javascripts/review.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-</body>
+    <!-- SWIPER JS -->
+    <script src="../javascripts/swiper-bundle.min.js"></script>
+
+    <!-- MAIN JS -->
+    <script src="../javascripts/home-books.js"></script>
+  </body>
 </html>
