@@ -1,6 +1,7 @@
 <%- include('../partials/header-pages') %>
 
 <%- include('../partials/nav-pages') %>
+<link rel="stylesheet" href="../stylesheets/udemyday12.css">
 
 <div class="main">
     <div class="contact-container">
@@ -28,9 +29,83 @@
         </div>
     </div>
 
-
-
 </div>
+
+<body>
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq-container">
+      <div class="faq active">
+        <h3 class="faq-title">
+            How do I search for a book on this website?
+        </h3>
+
+        <p class="faq-text">
+            To search for a book, simply enter the title, author, or keywords into the search bar on the homepage and press enter. You can also use advanced search options to narrow down your results by genre, publication date, or language.
+        </p>
+
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title">
+            Can I find both print and digital versions of books here?
+        </h3>
+        <p class="faq-text">
+            No, our search includes only digital formats
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="faq">
+        <h3 class="faq-title">
+            Do I need an account to use the site?
+        </h3>
+        <p class="faq-text">
+            No, you don't need an account to search for books. However, creating an account will allow you to save your search history, create wishlists, and set up notifications for new book releases.
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="faq">
+        <h3 class="faq-title">
+            How often is the book database updated?
+        </h3>
+        <p class="faq-text">
+            Our book database is updated daily with new titles, editions, and available reviews to ensure you have access to the most current information.
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="faq">
+        <h3 class="faq-title">
+            Can I request a book that is not listed on the website?
+        </h3>
+        <p class="faq-text">
+            If you cannot find a book, please contact us through the 'Contact' page, and we can help locate it for you or consider adding it to our database.
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+  </body>
+
+
+
+
 </div>
 
 <%- include('../partials/footer-pages') %>
@@ -38,5 +113,7 @@
 <script src="../javascripts/searchBar.js" async defer></script>
 <!--<script src="../javascripts/contact.js" async defer></script>-->
 <script src="../javascripts/ripple.js" async defer></script>
+<script src="../javascripts/udemyday12.js" async defer></script>
+
 </body>
 </html>
