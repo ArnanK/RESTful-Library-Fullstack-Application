@@ -29,6 +29,7 @@
                                             <td><%= books[i].bookISBN %></td>
                                         </tr>
                                     </table>
+                                    <% if (user) { %>
                                     <form action="/api/user/add-to-favorites" method="POST">
                                         <input type="hidden" name="bookTitle" value="<%= books[i].bookTitle %>">
                                         <input type="hidden" name="bookAuthor" value="<%= books[i].bookAuthor %>">
@@ -36,6 +37,7 @@
                                         <input type="hidden" name="bookThumbnail" value="<%= books[i].bookThumbnail %>">
                                         <button type="submit" class="button" id="favoriteButton">Add to Favorites</button>
                                     </form>
+                                    <% } %>
                                 </div>
                             </div>
                         </a>

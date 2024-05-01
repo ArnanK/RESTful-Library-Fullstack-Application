@@ -5,6 +5,7 @@ const aboutRouter = require('./about-pages');
 const faqRouter = require('./faq-pages');
 const searchRouter = require('./search-pages');
 const myaccountRouter = require('./myaccount-pages')
+const NotFoundRouter = require('./notFound-pages');
 
 
 const router = Router();
@@ -16,5 +17,6 @@ module.exports = (params) => {
   router.use(faqRouter(params));
   router.use(myaccountRouter(params));
   router.use(searchRouter(params));
+  router.use(NotFoundRouter(params));
   return router;
 };
