@@ -64,6 +64,8 @@
     font-size: var(--normal-font-size);
   }
   body {
+    position: relative;
+    padding-bottom: 150px;
     background-color: var(--body-color);
     color: var(--text-color);
     transition: background-color 0.4s;
@@ -246,7 +248,7 @@ nav.active .leftNav .brand{
     margin-top: 50px;
     width: 100%;
     min-height: 100vh;
-    position: relative;   
+    
 }
 
 .page .menu{
@@ -276,7 +278,6 @@ nav.active .leftNav .brand{
 .page .main{
     height: 100%;
     width: 100%;
-    
     z-index: 1;
 }
 
@@ -314,6 +315,14 @@ hr {
     margin: 5px 0;
     overflow: hidden;
     position: relative;
+}
+
+.button:hover{
+    opacity: 40%;
+}
+
+.button .active{
+    
 }
 
 
