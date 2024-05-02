@@ -2,16 +2,6 @@
 :root {
     --header-height: 3.5rem;
   
-    /* Colors */
-    /* Color mode HSL(hue, Saturation, lightness) */
-    --first-color: hsl(230, 62%, 56%);
-    --title-color: hsl(230, 70%, 16%);
-    --text-color: hsl(230, 16%, 45%);
-    --border-color: hsl(230, 50%, 90%);
-    --white-color: hsl(0, 0%, 100%);
-    --body-color: hsl(230, 100%, 96%);
-    --container-color: hsl(230, 100%, 97%);
-  
     /* Font And Typography */
     /* .5rem = 8px | 1rem = 16px ... */
     --body-font: "Montserrat", sans-serif;
@@ -86,11 +76,6 @@
   a {
     text-decoration: none;
   }
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
   
 /* -----------------Root------------------------------- */
 :root{
@@ -99,16 +84,17 @@
     --navbar-hover-color: #F5DEB3; 
     --navbar-background:#D2B48C;
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    --container-color: #e0ceb1;
 
 /* Colors */
   /* Color mode HSL(hue, Saturation, lightness) */
   --first-color: hsl(36, 77%, 59%);
   --title-color: hsl(230, 70%, 16%);
-  --text-color: hsl(231, 5%, 26%);
+  --text-color: hsl(240, 1%, 21%);
   --border-color: hsl(230, 50%, 90%);
   --white-color: hsl(0, 0%, 100%);
   --body-color: hsl(41, 82%, 89%);
-  --container-color: hsl(230, 100%, 97%);
+ 
 }
 
 
