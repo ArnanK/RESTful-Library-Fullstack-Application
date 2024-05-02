@@ -9,13 +9,24 @@ body{
     z-index: 10000;
 }
 #init{
-    background: #b8a286;
+    position: relative;
+    background: none;
     padding: 8px 8px;
     border-radius: 1px;
-    font-size: 12px;
+    font-size: 5px;
     border: none;
-    color: aliceblue;
+    color: transparent;
     cursor: pointer;
+    overflow: hidden;
+    height: 35px;
+    width: 35px;
+}
+#init img{
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    left: -5px;
+    top: -4px;
 }
 .child{
     box-shadow: 0 0 2px salmon;
@@ -31,9 +42,9 @@ body{
     display: flex;
     align-items: center;
     background: white;
-    width: 246px;
+    width: 256px;
     padding: 5px 5px;
-    height:50px;
+    height: 60px;
     z-index: 1;
     box-shadow: 0 0 1px rgb(192, 191, 191);
 }
@@ -57,7 +68,7 @@ body{
     top: 60px;
     padding: 8px 10px;
     font-size: 12px;
-    height: 404px;
+    height: 420px;
     overflow: auto;
     background: rgb(217, 236, 249);
     text-align: center;
@@ -75,7 +86,7 @@ body{
     font-size: 14px;
     color: rgb(90, 103, 116);
     box-shadow: 0 0 5px rgb(226,226,226);
-    max-width: 65%;
+    max-width: 78%;
     text-align: left;
 }
 .test{
@@ -120,4 +131,11 @@ body{
     background: rgb(255, 255, 255);
     border: 1px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
+}
+p.msg a{
+    text-decoration: none;
+    color: rgb(90, 103, 116);
+}
+p.msg a:hover{
+    color: blueviolet;
 }

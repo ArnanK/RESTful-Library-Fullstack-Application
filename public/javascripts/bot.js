@@ -14,7 +14,7 @@ var data= {
         url : {}
     },
     "yes(science": {
-        title:["Here are some recommendations for Science fiction books:", "1. Atlas Shrugged by Ayn Rand", "2. A Fire Upon the Deep by Vernor Vinge", "3. Children of Dune by Frank Herbert", "If you need me for anything else, feel free to ask again"],
+        title:["Here are some recommendations for Science fiction books:", '<a href="http://localhost:3000/search?query=gettysburg+address+by+abraham+lincoln">1. Gettysburg Address by Abraham Lincoln</a>', '<a href="http://localhost:3000/search?query=A+Fire+Upon+the+Deep+by+Vernor+Vinge">2. A Fire Upon the Deep by Vernor Vinge</a>', '<a href="http://localhost:3000/search?query=Children+of+Dune+by+Frank+Herbert">3. Children of Dune by Frank Herbert</a>', "If you need me for anything else, feel free to ask again"],
         options: ["I want another category"],
         url: {}
     },
@@ -29,7 +29,7 @@ var data= {
         url : {}
     },
     "yes(historical)": {
-        title:["Here are some recommendations for Historical books:", "1. Gettysburg Address by Abraham Lincoln", "2. I Have a Dream by Martin Luther King Jr.", "3. On War by Carl von Clausewitz", "If you need me for anything else, feel free to ask again"],
+        title:["Here are some recommendations for Historical books:", '<a href="http://localhost:3000/search?query=gettysburg+address+by+abraham+lincoln">1. Gettysburg Address by Abraham Lincoln</a>', '<a href="http://localhost:3000/search?query=I+Have+a+Dream+by+Martin+Luther+King+Jr.">2. I Have a Dream by Martin Luther King Jr.</a>', '<a href="http://localhost:3000/search?query=On+War+by+Carl+von+Clausewitz">3. On War by Carl von Clausewitz</a>', "If you need me for anything else, feel free to ask again"],
         options: ["I want another category"],
         url: {}
     },
@@ -39,7 +39,7 @@ var data= {
         url : {}
     },
     "yes(horror)": {
-        title:["Here are some recommendations for Horror books:", "1. Dracula by Bram Stoker", "2. The Shining by Stephen King", "3. I am Legend by Richard Matheson", "If you need me for anything else, feel free to ask again"],
+        title:["Here are some recommendations for Horror books:", '<a href="http://localhost:3000/search?query=Dracula+by+Bram+Stoker">1. Dracula by Bram Stoker</a>', '<a href="http://localhost:3000/search?query=The+Shining+by+Stephen+King">2. The Shining by Stephen King</a>', '<a href="http://localhost:3000/search?query=I+am+Legend+by+Richard+Matheson">3. I am Legend by Richard Matheson</a>', "If you need me for anything else, feel free to ask again"],
         options: ["I want another category"],
         url: {}
     },
@@ -49,7 +49,7 @@ var data= {
         url : {}
     },
     "yes(biography)": {
-        title:["Here are some recommendations for Biography books:", "1. Man's Search for Meaning by Viktor Frankl", "2. Poor Richard's Almanack by Benjamin Franklin", "3. Black Boy by Richard Wright", "If you need me for anything else, feel free to ask again"],
+        title:["Here are some recommendations for Biography books:", '<a href="http://localhost:3000/search?query=Man%27s+Search+for+Meaning+by+Viktor+Frankl">1. Man\'s Search for Meaning by Viktor Frankl</a>', '<a href="http://localhost:3000/search?query=Poor+Richard%27s+Almanack+by+Benjamin+Franklin">2. Poor Richard\'s Almanack by Benjamin Franklin</a>', '<a href="http://localhost:3000/search?query=Black+Boy+by+Richard+Wright">3. Black Boy by Richard Wright</a>', "If you need me for anything else, feel free to ask again"],
         options: ["I want another category"],
         url: {}
     },
@@ -59,7 +59,7 @@ var data= {
         url : {}
     },
     "yes(classics)": {
-        title:["Here are some recommendations for Classical books:", "1. The Canterbury Tales by Geoffrey Chaucer", "2. Don Quixote by Miguel de Cervantes", "3. The Trial by Franz Kafka", "If you need me for anything else, feel free to ask again"],
+        title:["Here are some recommendations for Classical books:", '<a href="http://localhost:3000/search?query=The+Canterbury+Tales+by+Geoffrey+Chaucer">1. The Canterbury Tales by Geoffrey Chaucer</a>', '<a href="http://localhost:3000/search?query=Don+Quixote+by+Miguel+de+Cervantes">2. Don Quixote by Miguel de Cervantes</a>', '<a href="http://localhost:3000/search?query=The+Trial+by+Franz+Kafka">3. The Trial by Franz Kafka</a>', "If you need me for anything else, feel free to ask again"],
         options: ["I want another category"],
         url: {}
     },
@@ -84,14 +84,15 @@ var chatOpen = false;
 
 function showChatBot(){
     console.log(this.innerText);
-    if(this.innerText=='START CHAT'){
-        document.getElementById('test').style.display='block';
-        document.getElementById('init').innerText='CLOSE CHAT';
+    if(this.innerText === 'START CHAT'){
+        document.getElementById('test').style.display = 'block';
+        document.getElementById('init').innerText = 'CLOSE CHAT';
+        document.getElementById('init').innerHTML = '<img src="../images/chatbot.png" alt="Button Image">CLOSE CHAT';
         if(chatOpen == false) initChat();
-    }
-    else if(this.innerText=='CLOSE CHAT'){
-        document.getElementById('test').style.display='none';
-        document.getElementById('init').innerText='START CHAT';
+    } else if(this.innerText === 'CLOSE CHAT'){
+        document.getElementById('test').style.display = 'none';
+        document.getElementById('init').innerText = 'START CHAT';
+        document.getElementById('init').innerHTML = '<img src="../images/chatbot.png" alt="Button Image">START CHAT';
         chatOpen = true;
     }
 }
