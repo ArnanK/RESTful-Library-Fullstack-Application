@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-undef
-const buttons = document.querySelectorAll('.btn.favorites');
+const buttons = document.querySelectorAll('#favoriteButton');
 
 buttons.forEach((button) => {
   button.addEventListener('click', async (event) => {
@@ -24,6 +24,10 @@ buttons.forEach((button) => {
         .then((res) => {
           if (res.ok) {
             console.log('Request successfully handled');
+            button.classList.add('active');
+            if(button.classList.contains('active')){
+              button.innerHTML = "Added!"
+            }
           } else {
             console.log('Failed to handle request');
           }
@@ -34,3 +38,4 @@ buttons.forEach((button) => {
     }
   });
 });
+

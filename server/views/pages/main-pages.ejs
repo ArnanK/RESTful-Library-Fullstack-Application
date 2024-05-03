@@ -1,197 +1,367 @@
 <%- include('../partials/header-pages') %>
-
 <!--<body>-->
-<%- include('../partials/nav-pages') %>
+    <%- include('../partials/nav-pages') %>
 
-<!--<div class="page">-->
-<!--    <div class="menu">-->
-<!--        <ul>-->
-<!--            <li><a href="/"><i class="fa-solid fa-house"></i>&nbsp;<b>Home</b></a></li>-->
-<!--            <li><a href="/about"><i class="fa-solid fa-circle-info"></i>&nbsp;<b>About</b></a></li>-->
-<!--            <li><a href="/favorites"><i class="fa-solid fa-heart"></i>&nbsp;<b>Our Favorites</b></a></li>-->
-<!--            <li><a href="/contact"><i class="fa-solid fa-inbox"></i>&nbsp;<b>Contact</b></a></li>-->
-<!--        </ul>-->
-<!--    </div>-->
-
-    <div class="main">
-        <!--Landing page-->
-        <section class="landingpage">
-            <div class="content">
-                <div class="landing-heading">
-                    <h1 data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="600">Easy<br> Healthy Recipes</h1>
-                    <p data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400"><b>46 Handpicked Dinner Recipes</b></p>
-                    <a href="https://www.food.com/ideas/low-calorie-dinner-recipes-6321#c-20526" target="_blank"><button class="main-button">View Recipes</button></a>
-                </div>
-                <div class="image">
-                    <img src="../images/main.jpeg" alt="" class="img" data-aos="zoom-in-left" data-aos-duration="3000">
-                </div>
+    <!-- MAIN START -->
+    <main class="main">
+      <!-- HOME START -->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__data">
+            <h1 class="home__title">
+              Browse &<br />
+              Select E-Books
+            </h1>
+            <p class="home__description">
+              Find the best E-books from you favorite writers, explore hundreds
+              of books with all possible categories, take advantage of the 50%
+              discound and much more.
+            </p>
+            <a href="#" class="button">Explore Now</a>
+          </div>
+          <div class="home__images">
+            <div class="home__swiper swiper">
+              <div class="swiper-wrapper">
+                <article class="home__article swiper-slide">
+                  <img
+                    src="../images/home-book-1.png"
+                    alt="image"
+                    class="home__img"
+                  />
+                </article>
+                <article class="home__article swiper-slide">
+                  <img
+                    src="../images/home-book-2.png"
+                    alt="image"
+                    class="home__img"
+                  />
+                </article>
+                <article class="home__article swiper-slide">
+                  <img
+                    src="../images/home-book-3.png"
+                    alt="image"
+                    class="home__img"
+                  />
+                </article>
+                <article class="home__article swiper-slide">
+                  <img
+                    src="../images/home-book-4.png"
+                    alt="image"
+                    class="home__img"
+                  />
+                </article>
+              </div>
             </div>
-        </section>
-        <!--Card Hover Effect-->
-        <section class="card-hover">
-            <hr>
-            <h1 class="card-heading">Easy Recipes for Dinner</h1>
-            <div class="card-wrapper">
-                <div class="card">
-                    <img src="../images/Baked-salmon.jpg"width="350" height="510">
-                    <div class="info">
-                        <h1>Baked Salmon</h1>
-                        <p>Enjoy tender, flaky salmon with just the right seasoning, cooked to perfection in your oven.
-                            No extra steps, no messy cleanup, just delicious fresh salmon made with ease</p>
-                        <a href="/search?query=salmon" class="btn">Read More</a>
-                    </div>
+          </div>
+        </div>
+      </section>
+      <!-- HOME END -->
+
+      <!-- DISCOUNT START -->
+      <section class="discount section" id="discount">
+        <div class="discount__container container grid">
+          <div class="discount__data">
+            <h2 class="discount__title section__title">Up To 50% Discount</h2>
+            <p class="discount__description">
+              Take advantage of the discount days we have for you, buy books
+              from your favorite writers, the more you buy, the more discounts
+              we have for you
+            </p>
+            <a href="#" class="button">Shop Now</a>
+          </div>
+          <div class="discount__images">
+            <img
+              src="../images/discount-book-1.png"
+              alt="image"
+              class="discount__img-1"
+            />
+            <img
+              src="../images/discount-book-2.png"
+              alt="image"
+              class="discount__img-2"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- DISCOUNT END -->
+
+      <!-- NEW BOOKS START -->
+      <section class="new section" id="new">
+        <h2 class="section__title">New Books</h2>
+
+        <div class="new__container container">
+          <div class="new__swiper swiper">
+            <div class="swiper-wrapper">
+              <a href="#" class="new__card swiper-slide">
+                <img src="../images/book-1.png" alt="image" class="new__img" />
+
+
+                <div>
+                  <h2 class="new__title">New Book</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+    
                 </div>
+              </a>
+              <a href="#" class="new__card swiper-slide">
+                <img src="../images/book-2.png" alt="image" class="new__img" />
 
-                <div class="card">
-                    <img src="../images/Chickpea-Curry.jpg" width="350" height="510">
-                    <div class="info">
-                        <h1>Chick Pea Curry</h1>
-                        <p>This Chickpea Curry Recipe is full of flavor!
-                            This recipe is vegan, gluten free and vegetarian. Serve over rice with a side of garlic naan bread!</p>
-                        <a href="/search?query=Chickpea" class="btn">Read More</a>
-                    </div>
+                <div>
+                  <h2 class="new__title">New Book</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+
                 </div>
+              </a>
+              <a href="#" class="new__card swiper-slide">
+                <img src="../images/book-3.png" alt="image" class="new__img" />
 
-                <div class="card">
-                    <img src="../images/Stuffed-Peppers.jpg"width="350" height="510">
-                    <div class="info">
-                        <h1>Stuffed Peppers</h1>
-                        <p>This classic recipe is easier and faster by using the microwave to par-cook the peppers, saving you about 45 minutes of cook time!
-                            This is a great recipe to use up leftover</p>
-                        <a href="/search?query=Stuffed peppers" class="btn">Read More</a>
-                    </div>
+                <div>
+                  <h2 class="new__title">New Book</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+    
                 </div>
+              </a>
+              
+              <a href="#" class="new__card swiper-slide">
+                <img src="../images/book-8.png" alt="image" class="new__img" />
 
+                <div>
+                  <h2 class="new__title">New Book</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
 
+                </div>
+              </a>
+              <a href="#" class="new__card swiper-slide">
+                <img src="../images/book-9.png" alt="image" class="new__img" />
+
+                <div>
+                  <h2 class="new__title">New Book</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+
+                </div>
+              </a>
+              <a href="#" class="new__card swiper-slide">
+                <img
+                  src="../images/book-10.png"
+                  alt="image"
+                  class="new__img"
+                />
+
+                <div>
+                  <h2 class="new__title">New Book</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+
+                </div>
+              </a>
             </div>
-        </section>
-        <!--Review section-->
+          </div>
 
-        <section class="review">
-            <hr>
-            <h1 class="review-heading">Customer's Review</h1>
-            <div class="swiper review-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide box">
-                        <img src="../images/pic-1.jpg">
-                        <p>Happiness on a Plate!</p>
-                        <h3>John Deo</h3>
-                        <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
+          <div class="new__swiper swiper">
+            <div class="swiper-wrapper">
+              <a href="#" class="new__card swiper-slide">
+                <img
+                  src="../images/book-10.png"
+                  alt="image"
+                  class="new__img"
+                />
 
-                    <div class="swiper-slide box">
-                        <img src="../images/pic-2.jpg">
-                        <p>Loved it! followed the salmon recipe</p>
-                        <h3>Kyan Mays</h3>
-                        <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="swiper-slide box">
-                        <img src="../images/pic-3.jpg">
-                        <p>My go to unsweetened peanut butter recipe</p>
-                        <h3>Donald Mcguire</h3>
-                        <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide box">
-                        <img src="../images/pic-4.jpg">
-                        <p>Healthy and Delicious</p>
-                        <h3>Kayla Hopper</h3>
-                        <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
-
-
+                <div>
+                  <h2 class="new__title">New Book</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+         
                 </div>
+              </a>
+              <a href="#" class="new__card swiper-slide">
+                <img src="../images/book-9.png" alt="image" class="new__img" />
+
+                <div>
+                  <h2 class="new__title">New Book</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+        
+                </div>
+              </a>
+              <a href="#" class="new__card swiper-slide">
+                <img src="../images/book-8.png" alt="image" class="new__img" />
+            
+                <div>
+                  <h2 class="new__title">New Book</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+   
+                </div>
+              </a>
+
+
+
+              <a href="#" class="new__card swiper-slide">
+                <img src="../images/book-3.png" alt="image" class="new__img" />
+                <div>
+                  <h2 class="new__title">New Book</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+          
+                </div>
+              </a>
+              <a href="#" class="new__card swiper-slide">
+                <img src="../images/book-2.png" alt="image" class="new__img" />
+                <div>
+                  <h2 class="new__title">New Book</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+               
+                </div>
+              </a>
+              <a href="#" class="new__card swiper-slide">
+                <img src="../images/book-1.png" alt="image" class="new__img" />
+                <div>
+                  <h2 class="new__title">New Book</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+                </div>
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+      <!-- NEW BOOKS END -->
 
-        <!--Image Slide-->
+      <!--Review section-->
 
-        <section class="scroll">
-            <hr>
-            <h1 class="heading">Popular on Breakfast</h1>
-            <div class="gallery-wrap">
-
-                <i class="fa-solid fa-arrow-left" id="backBtn"></i>
-
-                <div class="horizontal-scroll">
-                    <div>
-                        <span><img src="../images/overnight-oats.jpg" alt="Horizontal Image 1"></span>
-                        <span><img src="../images/vegan-chia-pudding.jpg" alt="Horizontal Image 2" ></span>
-                        <span><img src="../images/avocado-toast.jpg" alt="Horizontal Image 3"></span>
-
-                    </div>
-                    <div>
-                        <span><img src="../images/smoothie-bowl.jpg" alt="Horizontal Image 4" ></span>
-                        <span><img src="../images/Breakfast-Egg-Sandwich.jpg" alt="Horizontal Image 5" ></span>
-                        <span><img src="../images/smoothiesbreakfast.jpg" alt="Horizontal Image 6"></span>
+      <section class="review">
+        <hr>
+        <h1 class="review-heading">Customer's Review</h1>
+        <div class="swiper review-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="../images/pic-1.jpg">
+                    <p>Amazing Collection!!</p>
+                    <h3>John Deo</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
                     </div>
                 </div>
-                <i class="fa-solid fa-arrow-right" id="nextBtn"></i>
 
-            </div>
-        </section>
-        <section class="subscribe">
-            <hr>
-            <div class="small-box">
-                <img src="../images/baked-chicken-wings.jpg" alt="newsletter">
-                <div class="subscription-info">
-                    <h2>Subscribe to get our latest recipes!</h2>
-                    <p>Subscribe to get new posts in your inbox!</p>
-                    <form action="/subscribe" method="post">
-                        <div class="field">
-                            <label for="name"class="input-name-label"><b>Name:</b></label>
-                            <input type="text" class="input-name-field"name="name" placeholder="Enter your name" required><br>
-                        </div>
-                        <div class="field">
-                            <label for="email" class="input-email-label"><b>Email:</b></label>
-                            <input type="email" class="input-email-field" name="email" placeholder="Enter your email" required>
-                        </div>
-                        <button type="submit" class="subscribe-button">SUBSCRIBE</button>
-                    </form>
+                <div class="swiper-slide box">
+                    <img src="../images/pic-2.jpg">
+                    <p>True Gem!</p>
+                    <h3>Kyan Mays</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
                 </div>
+                <div class="swiper-slide box">
+                    <img src="../images/pic-3.jpg">
+                    <p>Recommending this website to everyone</p>
+                    <h3>Donald Mcguire</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/pic-4.jpg">
+                    <p>Good Place for Book Lover</p>
+                    <h3>Kayla Hopper</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                </div>  
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <!-- JOIN START -->
+    <section class="join section">
+      <div class="join__container">
+        <img src="../images/join-bg.jpg" alt="image" class="join__bg" />
+
+        <div class="join__data container grid">
+          <h2 class="join__title section__title">
+            Subscribe To Receive <br />
+            The Latest Updates
+          </h2>
+
+          <form action="" class="join__form">
+            <input
+              type="email"
+              placeholder="Enter email"
+              class="join__input"
+            />
+            <button type="submit" class="join__button button">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- JOIN END -->
 
 
-</div>
 
-<%- include('../partials/bot-pages') %>
+
+
 <%- include('../partials/footer-pages') %>
 
-<script src="../javascripts/bot.js"></script>
-<script src="../javascripts/searchBar.js" async defer></script>
-<script src="../javascripts/scroll.js" async defer></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="../javascripts/review.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+    <!-- SWIPER JS -->
+    <script src="../javascripts/swiper-bundle.min.js"></script>
+    <!-- REVIEW JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../javascripts/review.js"></script>
 
-</body>
+    <!-- MAIN JS -->
+    <script src="../javascripts/home-books.js"></script>
+
+    <script src="../javascripts/searchBar.js" async defer></script>
+    <script src="../javascripts/bot.js"></script>
+
+
+  </body>
 </html>
+

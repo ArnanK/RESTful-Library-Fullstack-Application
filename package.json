@@ -16,7 +16,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "ejs": "^2.6.2",
-    "express": "^4.17.1",
+    "express": "^4.19.2",
     "express-validator": "^6.10.0",
     "http-errors": "^1.7.3",
     "mongoose": "^5.11.15",

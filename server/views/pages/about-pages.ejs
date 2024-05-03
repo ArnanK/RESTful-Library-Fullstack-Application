@@ -1,10 +1,19 @@
 <%- include('../partials/header-pages') %>
-
 <%- include('../partials/nav-pages') %>
+<link rel="stylesheet" href="../stylesheets/udemyday5.css">
 
+<div class="main">
+<div class="block">
 <div class="about-container">
-    <h1>About Us</h1>
-    <img src="https://www.foodiesfeed.com/wp-content/uploads/2023/09/healthy-food.jpg" alt="Delicious Food" class="about-image">
+
+
+    <h1 style="color:white">About Us</h1>
+    <div class="bg"></div> <!-- Background for the blur effect -->
+    <div class="loading-text" style="display: none;">0%</div> <!-- Text that shows loading percentage -->
+
+
+    <div class="content-effect-container">
+    
     <div class="about-content">
         <p>Welcome to your ultimate destination for discovering and sharing recipes. Our mission is to empower home cooks with a wide variety of easy-to-follow recipes, curated from all over the globe. Whether you're looking for a quick weekday dinner or a challenging weekend project, our collection of recipes is designed to inspire creativity in the kitchen.</p>
         <p>Founded by a team of food enthusiasts, our website is driven by a passion for cooking and sharing meals. We believe in the power of food to bring people together and aim to create a community where users can share their culinary adventures and discoveries.</p>
@@ -16,13 +25,21 @@
             <li>A selection of our favorite videos that include cooking tips and how to eat healthy</li>
         </ul>
         <p>Join us on our journey to make cooking more accessible and enjoyable for everyone. Explore new flavors, share your creations, and become part of our growing community of food lovers.</p>
+        </div>
     </div>
+</div>
 </div>
 
 <%- include('../partials/bot-pages') %>
 <%- include('../partials/footer-pages') %>
 
+
+
 <script src="../javascripts/searchBar.js" async defer></script>
 <script src="../javascripts/bot.js" async defer></script>
+<script src="../javascripts/udemyday5.js" defer></script>
+<script src="../javascripts/udemyday40.js" defer></script>
+
+
 </body>
 </html>

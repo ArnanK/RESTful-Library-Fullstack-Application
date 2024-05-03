@@ -1,22 +1,109 @@
 /*----------------Initial Configurations----------------*/
+:root {
+    --header-height: 3.5rem;
+  
 
-*{
+    /* Colors */
+    /* Color mode HSL(hue, Saturation, lightness) */
+    --first-color: hsl(230, 62%, 56%);
+    --title-color: hsl(36, 70%, 16%);
+    --text-color: hsl(230, 16%, 45%);
+    --border-color: hsl(230, 50%, 90%);
+    --white-color: hsl(0, 0%, 100%);
+    --body-color: hsl(230, 100%, 96%);
+    --container-color: hsl(230, 100%, 97%);
+  
+
+    /* Font And Typography */
+    /* .5rem = 8px | 1rem = 16px ... */
+    --body-font: "Montserrat", sans-serif;
+    --second-font: "Montagu Slab", serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  
+    /* Font Weight */
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /* Z Index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  /* Responsive Typography  */
+  @media screen and (min-width: 1150px) {
+    :root {
+      --biggest-font-size: 3.5rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: 0.875rem;
+      --smaller-font-size: 0.813rem;
+    }
+  }
+  
+  /* BASE */
+  * {
     box-sizing: border-box;
-}
-html{
-    height: 100vh;
-    
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    height: inherit;
-    width: 100%;
+    padding: 0;
     margin: 0;
-    overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-}
+  }
+  html {
+    scroll-behavior: smooth;
+    height: 100vh;
+  }
+  body,
+  input,
+  button {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+  }
+  body {
+    position: relative;
+    padding-bottom: 150px;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: background-color 0.4s;
+  }
+  input,
+  button {
+    border: none;
+    outline: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--title-color);
+    font-family: var(--second-font);
+    font-weight: var(--font-medium);
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .block{
+    display: block;
+    height: 100vh;
+  }
+
+  
 /* -----------------Root------------------------------- */
 :root{
     --font-color: #f3efe0;
@@ -24,6 +111,17 @@ body{
     --navbar-hover-color: #F5DEB3; 
     --navbar-background:#D2B48C;
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    --container-color: #e0ceb1;
+
+/* Colors */
+  /* Color mode HSL(hue, Saturation, lightness) */
+  --first-color: hsl(36, 77%, 59%);
+  --title-color: hsl(230, 70%, 16%);
+  --text-color: hsl(240, 1%, 21%);
+  --border-color: hsl(230, 50%, 90%);
+  --white-color: hsl(0, 0%, 100%);
+  --body-color: hsl(41, 82%, 89%);
+ 
 }
 
 
@@ -39,6 +137,7 @@ nav{
     height: 70px;
     width: 100%;
     position: fixed;
+    top: 0;
     z-index: 7;
     transition: all .3s ease-in-out;
 }
@@ -153,6 +252,8 @@ nav.active .leftNav .brand{
     flex-direction: column;
     margin-top: 50px;
     width: 100%;
+    min-height: 100vh;
+    
 }
 
 .page .menu{
@@ -182,7 +283,6 @@ nav.active .leftNav .brand{
 .page .main{
     height: 100%;
     width: 100%;
-    
     z-index: 1;
 }
 
@@ -222,6 +322,14 @@ hr {
     position: relative;
 }
 
+.button:hover{
+    opacity: 40%;
+}
+
+.button .active{
+    
+}
+
 
 
 
@@ -232,9 +340,9 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 190px;
+    height: 150px;
     width: 100%;
-    position: relative; 
+    position: absolute; 
     bottom: 0px; 
 }
 

@@ -1,19 +1,26 @@
 <%- include('../partials/header-pages'); -%>
 <%- include('../partials/nav-pages'); -%>
+
+
 <div class="main">
   <%- include('../partials/messages');%>
+  <div class="block">
   <div class="login-container">
       <form action="/auth/login" method="post" autocomplete="off" id="loginForm" class="login-left">
+        <link rel="stylesheet" href="../stylesheets/udemyday8.css">  
           <div class="login-left-title">
               <h2>Login</h2>
               <hr>
           </div>
-
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" placeholder="Username" class="login-inputs" required>
-
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" placeholder="Your Password" class="login-inputs" required>
+          <div class="form-control">
+            <input type="text" id="username" name="username" placeholder="" required>
+            <label for="username">Username:</label>
+          </div>
+        
+          <div class="form-control">
+            <input type="password" id="password" name="password" placeholder="" required>
+            <label for="password">Password:</label>
+          </div>
 
           <div class="form-check">
             <label class="form-check-label" for="rememberme">Remember me:</label>
@@ -35,19 +42,24 @@
           <div><a href="/auth/resetpassword">Forgot Password?</a></div>
       </form>
       <div class="login-right">
-          <img src="../images/pasta.jpg" alt="">
+          <img src="../images/auth_cover.jpeg" alt="">
       </div>
+  </div>
   </div>
 
 
 
 </div>
-</div>
 
 <%- include('../partials/footer-pages') %>
+
+<script src="../javascripts/udemyday8.js" defer></script>
+
+
 
 <script src="../javascripts/searchBar.js" async defer></script>
 <!--<script src="../javascripts/contact.js" async defer></script>-->
 <script src="../javascripts/ripple.js" async defer></script>
+
 </body>
 </html>
