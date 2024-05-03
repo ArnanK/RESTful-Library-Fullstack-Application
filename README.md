@@ -12,6 +12,10 @@ This project utilizes the Google Books API and provides books for users. This pr
 - [@Eric Yang](https://github.com/BenevolentBurger)
 
 
+## Acknowledgements
+
+ - [Linkedin Learning | Node Authentication by Daniel Khan](https://github.com/LinkedInLearning/node-authentication-2881188)
+
 ## Requirements
 ```
 Node.js
