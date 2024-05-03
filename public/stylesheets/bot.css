@@ -1,12 +1,6 @@
-html,body{
-    height: 100%;
-}
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #F5DEB3;
-}
+
 #bot{
-    z-index: 10000;
+    z-index: 90000;
 }
 #init{
     position: relative;
