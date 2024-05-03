@@ -63,7 +63,28 @@ To run this project, you will need to add the following environment variables to
 | `API_KEY` | `string` | **Required**. Your API key |
 
 
+## Required Software
+- Docker
+- MongoDB
+- MongoDB Compass
 
+
+### Requires MongoDB through Docker
+(default port 27017 is mapped to port 37017)
+```bash
+  docker pull mongo
+  docker run --name mongodb -p 37017:27017 -d mongo
+```
+
+#### Verify container is installed by:
+```
+  docker ps
+```
+
+#### Run container by:
+```
+  docker start mongo
+```
 
 
 ## Run Locally
