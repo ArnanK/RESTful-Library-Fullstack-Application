@@ -1,6 +1,6 @@
 
 #bot{
-    z-index: 90000;
+    z-index: 999999999999999999999999999999999999999999999999999999;
 }
 #init{
     position: relative;
@@ -12,8 +12,8 @@
     color: transparent;
     cursor: pointer;
     overflow: hidden;
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 47px;
 }
 #init img{
     position: absolute;

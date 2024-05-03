@@ -24,6 +24,8 @@
   overflow: hidden; /* for Animation Scrollreveal */
 }
 
+
+
 /* HOME */
 .home__swiper {
   margin: initial;
@@ -235,6 +237,9 @@
 
 /* JOIN */
 .join__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   padding-block: 3rem;
 }
@@ -259,8 +264,8 @@
   row-gap: 1rem;
 }
 .join__input {
-  margin-left: 360px;
-  width: 500px;
+  
+  width: 100%;
   padding: 1.25rem 1rem;
   background-color: var(--body-color);
   color: var(--title-color);
@@ -270,10 +275,14 @@
   color: var(--text-color);
 }
 .join__button {
-  margin-left: 360px;
-  width: 500px;
+  width: 100%;
   padding-block: 1.25rem;
   cursor: pointer;
+}
+
+
+hr{
+  width: 100%;
 }
 
 

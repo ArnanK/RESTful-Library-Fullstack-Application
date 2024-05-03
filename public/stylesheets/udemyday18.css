@@ -12,10 +12,7 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  margin: 0;
-  background-position: center center;
-  background-size: cover;
-  transition: 0.4s;
+  
 }
 
 body::before {
