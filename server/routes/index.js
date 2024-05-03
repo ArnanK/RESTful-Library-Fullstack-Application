@@ -2,7 +2,7 @@ const { Router } = require('express');
 const cors = require('cors');
 const authRouter = require('./auth');
 const apiRouter = require('./api');
-const playgroundRouter = require('./playground');
+//const playgroundRouter = require('./playground');
 const pagesRouter = require('./pages/index');
 
 const router = Router();
@@ -19,7 +19,7 @@ module.exports = (params) => {
   // This delegates everything under /auth to the respective routing module.
   // We also pass down the params.
   router.use('/auth', authRouter(params));
-  router.use('/playground', playgroundRouter(params));
+  //router.use('/playground', playgroundRouter(params));
 
   // Note the CORS middleware here - this is needed as we are calling the APi from a different URL/port
   router.use('/api', cors(), apiRouter(params));

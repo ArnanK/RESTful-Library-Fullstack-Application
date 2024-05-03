@@ -67,6 +67,8 @@ module.exports = () => {
             page: 'registration',
             data: req.body,
             errors,
+            title: 'registration',
+            stylesheet: 'login.css',
           });
         }
 

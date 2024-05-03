@@ -1,13 +1,16 @@
-<nav>
+<nav id = "nav">
+    
     <div class="leftNav">
         <a href="/home" class="brand"><i class="fa-solid fa-book"></i>
             <h1>E-Book</h1>
         </a>
+
+        
         <i class="fa fa-bars" id="menuButton"></i>
         <ul id="list">
             <li><a href="/about"><i class="fa-solid fa-circle-info"></i>&nbsp;<b>About</b></a></li>
             <li><a href="/favorites"><i class="fa-solid fa-heart"></i>&nbsp;<b>Our Favorites</b></a></li>
-            <li><a href="/contact"><i class="fa-solid fa-inbox"></i>&nbsp;<b>Contact</b></a></li>
+            <li><a href="/faq"><i class="fa-solid fa-inbox"></i>&nbsp;<b>FAQ</b></a></li>
             <li><a href="/playground/userlist"><i class="fa-solid fa-address-book"></i><b>User List</b></a></li>
             <% if(locals.user) {%>
                 <li><a href="/auth/logout"><i class="fa-solid fa-sign-out"></i><b>Logout <%=user.username%></b></a></li>
@@ -33,7 +36,7 @@
             <li><a href="/home"><i class="fa-solid fa-house"></i>&nbsp;<b>Home</b></a></li>
             <li><a href="/about"><i class="fa-solid fa-circle-info"></i>&nbsp;<b>About</b></a></li>
             <li><a href="/favorites"><i class="fa-solid fa-heart"></i>&nbsp;<b>Our Favorites</b></a></li>
-            <li><a href="/contact"><i class="fa-solid fa-inbox"></i>&nbsp;<b>Contact</b></a></li>
+            <li><a href="/faq"><i class="fa-solid fa-inbox"></i>&nbsp;<b>FAQ</b></a></li>
             <li><a href="/playground/userlist"><i class="fa fa-address-book"><b>User List</b></i></a></li>
             <% if(locals.user) {%>
             <li><a href="/auth/logout"><i class="fa fa-sign-out"></i><b>Logout <%=user.username%></b></a></li>

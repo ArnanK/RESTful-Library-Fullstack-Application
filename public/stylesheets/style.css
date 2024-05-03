@@ -2,6 +2,18 @@
 :root {
     --header-height: 3.5rem;
   
+
+    /* Colors */
+    /* Color mode HSL(hue, Saturation, lightness) */
+    --first-color: hsl(230, 62%, 56%);
+    --title-color: hsl(36, 70%, 16%);
+    --text-color: hsl(230, 16%, 45%);
+    --border-color: hsl(230, 50%, 90%);
+    --white-color: hsl(0, 0%, 100%);
+    --body-color: hsl(230, 100%, 96%);
+    --container-color: hsl(230, 100%, 97%);
+  
+
     /* Font And Typography */
     /* .5rem = 8px | 1rem = 16px ... */
     --body-font: "Montserrat", sans-serif;
@@ -45,6 +57,7 @@
   }
   html {
     scroll-behavior: smooth;
+    height: 100vh;
   }
   body,
   input,
@@ -53,6 +66,8 @@
     font-size: var(--normal-font-size);
   }
   body {
+    position: relative;
+    padding-bottom: 150px;
     background-color: var(--body-color);
     color: var(--text-color);
     transition: background-color 0.4s;
@@ -76,6 +91,18 @@
   a {
     text-decoration: none;
   }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .block{
+    display: block;
+    height: 100vh;
+  }
+
   
 /* -----------------Root------------------------------- */
 :root{
@@ -225,6 +252,8 @@ nav.active .leftNav .brand{
     flex-direction: column;
     margin-top: 50px;
     width: 100%;
+    min-height: 100vh;
+    
 }
 
 .page .menu{
@@ -254,7 +283,6 @@ nav.active .leftNav .brand{
 .page .main{
     height: 100%;
     width: 100%;
-    
     z-index: 1;
 }
 
@@ -294,6 +322,14 @@ hr {
     position: relative;
 }
 
+.button:hover{
+    opacity: 40%;
+}
+
+.button .active{
+    
+}
+
 
 
 
@@ -304,9 +340,9 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 230px;
+    height: 150px;
     width: 100%;
-    position: relative; 
+    position: absolute; 
     bottom: 0px; 
 }
 

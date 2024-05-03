@@ -1,12 +1,14 @@
 <%- include('../partials/header-pages'); -%>
 <%- include('../partials/nav-pages'); -%>
 <div class="main">
+  <div class="block">
   <div class="login-container">
       <form action="/auth/register" method="post" autocomplete="off" id="loginForm" class="login-left">
           <div class="login-left-title">
               <h2>Registration</h2>
               <hr>
           </div>
+          <%- include('../partials/messages');%>
 
           <label for="username">Username:</label>
           <input name="username"
@@ -43,13 +45,13 @@
 
       </form>
       <div class="login-right">
-          <img src="../images/pasta.jpg" alt="">
+          <img src="../images/auth_cover.jpeg" alt="">
       </div>
+  </div>
   </div>
 
 
 
-</div>
 </div>
 
   <%- include('../partials/footer-pages'); -%>
