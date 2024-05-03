@@ -30,12 +30,5 @@ let swiperNew = new Swiper(".new__swiper", {
   },
 });
 
-const scrollUp = () => {
-  const scrollUp = document.getElementById("scroll-up");
-  // when the scroll is higher than 350 viewport height, add the
-  this.scrollY >= 350
-    ? scrollUp.classList.add("show-scroll")
-    : scrollUp.classList.remove("show-scroll");
-};
-window.addEventListener("scroll", scrollUp);
+
 
