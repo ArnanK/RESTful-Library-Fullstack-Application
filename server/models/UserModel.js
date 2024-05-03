@@ -28,7 +28,7 @@ const userSchema = mongoose.Schema(
     },
     verified: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     verificationToken: {
       type: String,
@@ -37,6 +37,28 @@ const userSchema = mongoose.Schema(
       unique: true,
       default: () => crypto.randomBytes(20).toString('hex'),
     },
+    favorites: [
+      {
+        bookTitle: {
+          type: String,
+          required: true,
+        },
+        bookAuthor: {
+          type: String,
+          required: true,
+          unique: false,
+        },
+        bookISBN: {
+          type: String,
+          required: true,
+          unique: false,
+        },
+        bookThumbnail: {
+          type: String,
+          required: true,
+        },
+      },
+    ],
   },
   {
     timestamps: true,

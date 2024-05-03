@@ -10,7 +10,7 @@ module.exports = () => {
    * GET route to display the login form
    */
   router.get('/login', (req, res) => {
-    res.render('auth/login', { page: 'login' });
+    res.render('auth/login', { page: 'login-pages', title: 'login', stylesheet: 'login.css', });
   });
 
   /**
@@ -33,7 +33,7 @@ module.exports = () => {
         } else {
           req.session.rememberme = null;
         }
-        return res.redirect('/');
+        return res.redirect('/home');
       } catch (err) {
         return next(err);
       }
@@ -51,7 +51,7 @@ module.exports = () => {
       text: 'You are logged out now!',
       type: 'info',
     });
-    return res.redirect('/');
+    return res.redirect('/home');
   });
 
   return router;

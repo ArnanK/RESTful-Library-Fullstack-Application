@@ -1,0 +1,126 @@
+
+.login-container {
+    max-width: 1100px;
+    max-height: 750px;
+    margin: 40px auto;
+    background-color: #F3EFE0;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-container{
+    height: 95vh;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.login-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 17px;
+    justify-items: center;
+}
+.login-left-title h2{
+    font-weight: 600;
+    color: #000000;
+    font-size: 40px;
+    margin-bottom: 5px;
+    margin-top: -10px;
+}
+.login-left-title hr{
+    background-color: #000000;
+    width: 150px;
+    margin-top: 8px;
+    margin-left: 0px;
+}
+
+#loginForm label {
+    display: block;
+    color: #2d2d2d;
+}
+
+.login-inputs{
+    width: 430px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #2d2d2d;
+    border-radius: 2px;
+}
+.login-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 2px;
+}
+.login-inputs:focus{
+    border: 2px solid #e6955b;
+}
+.login-inputs::placeholder{
+    color: #a9a9a9;
+}
+
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.button-container button:hover {
+    opacity: 70%;
+}
+.button-container button:focus {
+    outline: none;
+}
+.button{
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 2px;
+    background: #000000;
+    cursor: pointer;
+    margin: 5px 0;
+    overflow: hidden;
+    position: relative;
+}
+.circle{
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+}
+@keyframes scale {
+    to{
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
+
+.login-right{
+    margin-left: -10px;
+    border-radius: 2px;
+}
+.login-right img{
+    height: 550px;
+    width: 470px;
+    align-items: center;
+}
+
+@media (max-width: 955px){
+    .login-inputs{
+        width: 70vw;
+    }
+    .login-right{
+        display: none;
+    }
+}

@@ -1,0 +1,58 @@
+<%- include('../partials/header-pages') %>
+<%- include('../partials/nav-pages') %>
+    <div class="main">
+        <div class="search-bar">
+            <form action="/search" method="GET">
+                <label for="searchInput">Explore More books</label>
+                <input type="text" id="searchInput" class="input" name="query" placeholder="Search..." required>
+
+                <input type="submit">
+            </form>
+        </div>
+
+        <div class="content">
+            <% if (books.length > 0) { %>
+                <h3 class="results">Results: <%= books.length %> </h3>
+                <div class="books">
+                    <% for(let i=0; i < books.length; i++){ %>
+                            <div class="card">
+                                <div class="text">
+                                    <img src="<%= books[i].bookThumbnail%>">
+                                    <h4><%= books[i].bookTitle %></h4>
+                                    <table>
+                                        <tr>
+                                            <td>Author</td>
+                                            <td><%= books[i].bookAuthor %></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ISBN</td>
+                                            <td><%= books[i].bookISBN %></td>
+                                        </tr>
+                                    </table>
+                                    <% if (user) { %>
+                                    <form action="/api/user/add-to-favorites" method="POST">
+                                        <input type="hidden" name="bookTitle" value="<%= books[i].bookTitle %>">
+                                        <input type="hidden" name="bookAuthor" value="<%= books[i].bookAuthor %>">
+                                        <input type="hidden" name="bookISBN" value="<%= books[i].bookISBN %>">
+                                        <input type="hidden" name="bookThumbnail" value="<%= books[i].bookThumbnail %>">
+                                        <button type="submit" class="button" id="favoriteButton">Add to Favorites</button>
+                                    </form>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </a>
+                    <% } %>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer-pages') %>
+<%- include('../partials/bot-pages') %>
+
+<script src="../javascripts/favoriteButtons.js" async defer></script>
+<%- include('../partials/scripts') %>
+
+</body>
+</html>

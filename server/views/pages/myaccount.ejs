@@ -1,0 +1,58 @@
+<%- include('../partials/header-pages'); -%>
+<%- include('../partials/nav-pages'); -%>
+  
+
+<div class="main">
+  <div class="account">
+    <div class="card-account">
+      <h2>Account: </h2>
+      <div class="account-card">
+        <h5>Username: <%= user.username %></h5>
+        <h5>Email: <%= user.email %></h5>
+        <br>
+        <form action="/auth/resetpassword" method="POST">
+          <input type="hidden" name="email" value="<%= user.email %>">
+          <button class="button" type="submit">Change Password</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="favorites">
+    <% if(user.favorites.length > 0){ %>
+      <% for(let i=0; i < user.favorites.length; i++){ %>
+      <div class="card">
+            <img src="<%= user.favorites[i].bookThumbnail%>">
+            <h4><%= user.favorites[i].bookTitle %></h4>
+            <table>
+                <tr>
+                    <td>Author</td>
+                    <td><%= user.favorites[i].bookAuthor %></td>
+                </tr>
+                <tr>
+                    <td>ISBN</td>
+                    <td><%= user.favorites[i].bookISBN %></td>
+                </tr>
+            </table>
+            <form action="/api/user/remove-from-favorites" method="POST">
+                <input type="hidden" name="bookISBN" value="<%= user.favorites[i].bookISBN %>">
+                <button type="submit" class="button">Remove From Favorites</button>
+            </form>
+      </div>
+      <% } %> 
+     <% } %> 
+
+  </div>
+  
+</div>
+
+
+<%- include('../partials/footer-pages'); -%>
+<%- include('../partials/bot-pages') %>
+
+</body>
+<!--<script src="../javascripts/contact.js" async defer></script>-->
+<script src="../javascripts/ripple.js" async defer></script>
+<%- include('../partials/scripts') %>
+
+</html>

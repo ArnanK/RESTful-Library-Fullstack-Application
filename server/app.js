@@ -61,7 +61,7 @@ module.exports = (config) => {
 
   // See express body parsers for more information
   app.use(express.json());
-  app.use(express.urlencoded({ extended: false }));
+  app.use(express.urlencoded({ extended: true }));
   app.use(cookieParser());
 
   app.use(passport.initialize());
