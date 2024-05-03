@@ -44,6 +44,9 @@
 }
 .home__images {
   display: grid;
+  display: block;
+  max-width: 85%;
+  height: auto;
 }
 .home__article,
 .home__img {
@@ -90,11 +93,214 @@
   transition: border 0.4s, background-color 0.4s;
 }
 
+.discount__container {
+  row-gap: 3.5rem;
+  margin-top: 140px;
+}
+.discount__data {
+  text-align: center;
+}
+.discount__title {
+  margin-bottom: 1rem;
+}
+.discount__description {
+  margin-bottom: 2rem;
+}
+.discount__images {
+  display: flex;
+  justify-content: center;
+}
+.discount__img-1,
+.discount__img-2 {
+  width: 170px;
+}
+.discount__img-1 {
+  transform: translateX(1rem) rotate(-10deg);
+}
+.discount__img-2 {
+  transform: translateX(-1rem) rotate(10deg);
+}
+.review-heading{
+  text-align: center;
+}
 
+
+/* NEW */
+.new__card {
+  display: flex;
+  align-items: center;
+  
+  column-gap: 2.5rem;
+  background-color: var(--container-color);
+  padding: 1.5rem 1rem;
+  color: var(--text-color);
+  
+  transition: border 0.4s, background-color 0.4s;
+  
+}
+.new__card:hover {
+  box-shadow: 1px 1px 10px 4px #D2B48C;
+}
+.new__img {
+  width: 90px;
+  margin-left:90px;
+
+}
+
+.new__title {
+  font-size: var(--h2-font-size);
+  margin-left:90px;
+  margin-bottom: 0.5rem;
+}
+.new__prices {
+  display: flex;
+  align-items: center;
+  column-gap: 0.60rem;
+  margin-bottom: 0.75rem;
+  margin-left:90px;
+}
+.new__discount {
+  color: var(--title-color);
+}
+.new__price {
+  font-size: var(--small-font-size);
+  text-decoration: line-through;
+  margin-left:10px;
+}
+
+
+.new__swiper:nth-child(1) {
+  margin-bottom: 2rem;
+}
+
+.review-heading{
+  text-align: center;
+}
+.review-heading span{
+  background: #000;
+  color: white;
+  display: inline-block;
+  padding: .5rem 1rem;
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%,7% 50%,0% 0%);
+}
+
+
+.review .review-slider{
+  border: 0px solid;
+  padding: 1rem;
+  width: 80%;
+}
+
+.review .review-slider .box{
+  border: 0px solid red;
+  background: #fff;
+  border-radius: .3rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  outline-offset: -1rem;
+  outline: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+  transition: .2s linear;
+  
+}
+.review .review-slider .box:hover{
+  box-shadow: 1px 1px 10px 4px #D2B48C;
+}
+.review .review-slider .box img{
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.review .review-slider .box p{
+  padding: 0.7rem 0;
+  line-height: 0.8;
+  color: #666;
+  font-size: 1.2rem;
+}
+.review .review-slider .box h3{
+  padding-bottom: .5rem;
+  color: #130f40;
+  font-size: 2.2rem;
+}
+
+.review .review-slider .box .stars i{
+  
+  color: orange;
+  font-size: 1.2rem;
+}
+.swiper-wrapper{
+  width: 60%;
+}
+
+/* JOIN */
+.join__container {
+  position: relative;
+  padding-block: 3rem;
+}
+.join__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.join__data {
+  position: relative;
+}
+.join__title {
+  color: var(--white-color);
+}
+.join__form {
+  margin-top: 60px;
+  display: grid;
+  row-gap: 1rem;
+}
+.join__input {
+  margin-left: 360px;
+  width: 500px;
+  padding: 1.25rem 1rem;
+  background-color: var(--body-color);
+  color: var(--title-color);
+  transition: background-color 0.4s;
+}
+.join__input::placeholder {
+  color: var(--text-color);
+}
+.join__button {
+  margin-left: 360px;
+  width: 500px;
+  padding-block: 1.25rem;
+  cursor: pointer;
+}
+
+
+/* For small devices */
+@media screen and (max-width: 320px) {
+
+  .discount__img-1,
+  .discount__img-2 {
+    width: 140px;
+  }
+  .new__card {
+    flex-direction: column;
+  }
+ 
+}
+
+@media screen and (min-width: 450px) {
+
+  .new__card {
+    width: 350px;
+  }
+}
 
 @media screen and (min-width: 576px) {
   
-  .home__container{
+  .home__container,
+  .discount__container {
     grid-template-columns: 420px;
     justify-content: center;
   }
@@ -118,8 +324,38 @@
   .home__data {
     width: initial;
   }
+  .discount__container {
+    grid-template-columns: 615px 500px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .discount__data {
+    order: 1;
+  }
+  .discount__data,
+  .discount__title {
+    text-align: initial;
+  }
+  .discount__description {
+    margin-bottom: 3.5rem;
+  }
+  .discount__img-1,
+  .discount__img-2 {
+    width: 300px;
+  }
+
+  .new__card {
+    padding: 1.5rem;
+  }
+  .new__img {
+    width: 120px;
+  }
+  .new__title {
+    font-size: var(--h3-font-size);
+  }
 
 }
+
 
 @media screen and (min-width: 1220px) {
   .container {
