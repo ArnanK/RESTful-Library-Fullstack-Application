@@ -15,6 +15,8 @@ This project utilizes the Google Books API and provides books for users. This pr
 ## Requirements
 ```
 Node.js
+Docker
+MongoDB
 ```
 ## Dependencies
 
