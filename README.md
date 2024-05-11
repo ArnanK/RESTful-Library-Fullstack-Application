@@ -121,10 +121,4 @@ Start the server
 
 
 ## Presentation
-[![Alt text]()
-
-
-## Demo
-
-![Alt Text]()
-
+[![Alt text](https://youtu.be/Zm34mjBco6A)
