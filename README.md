@@ -121,4 +121,4 @@ Start the server
 
 
 ## Presentation
-[![Alt text](https://youtu.be/Zm34mjBco6A)
+[![Alt text](https://img.youtube.com/vi/Zm34mjBco6A/0.jpg)](https://www.youtube.com/watch?v=Zm34mjBco6A)
